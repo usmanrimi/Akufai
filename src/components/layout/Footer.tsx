@@ -51,9 +51,9 @@ export default function Footer() {
           <div className="md:col-span-5 space-y-5">
             <Link
               href="/"
-              className="inline-block bg-white rounded-2xl p-3.5 sm:p-4.5 shadow-sm hover:opacity-95 transition-opacity"
+              className="inline-block bg-white rounded-xl p-2 sm:p-2.5 shadow-sm hover:opacity-95 transition-opacity"
             >
-              <div className="relative h-16 w-52 sm:h-20 sm:w-64 lg:h-22 lg:w-72">
+              <div className="relative h-18 w-56 sm:h-22 sm:w-72 lg:h-24 lg:w-80">
                 <Image
                   src="/images/logo.png"
                   alt="Akufai Capital & Equities"

@@ -112,9 +112,6 @@ export default function ContactPage() {
 
             <div className="space-y-6 relative z-10">
               <div className="space-y-2">
-                <span className="text-xs font-mono font-bold tracking-widest text-[#b6950b] uppercase">
-                  Protocols & Process
-                </span>
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
                   Engagement Guidelines
                 </h2>

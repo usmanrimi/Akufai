@@ -51,7 +51,7 @@ export default function Header() {
             className="flex items-center shrink-0 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#008751] rounded-lg"
             aria-label="Akufai Capital & Equities Home"
           >
-            <div className="relative h-13 w-48 sm:h-15 sm:w-56 lg:h-16 lg:w-64 transition-transform duration-300 group-hover:opacity-95">
+            <div className="relative h-14 w-52 sm:h-16 sm:w-60 lg:h-18 lg:w-72 transition-transform duration-300 group-hover:opacity-95">
               <Image
                 src="/images/logo.png"
                 alt="Akufai Capital & Equities"
