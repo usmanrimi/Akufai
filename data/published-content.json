@@ -1,0 +1,357 @@
+{
+  "version": "v1.0.4",
+  "exportedAt": "2026-10-08T21:36:40.031Z",
+  "settings": {
+    "siteName": "Akufai Capital & Equities",
+    "siteTagline": "A founder-led firm with a selective lens.",
+    "metaDescription": "Akufai Capital & Equities LLC is a private investment firm led by Dr. Ali Garba, taking a venture-leaning and long-term approach to opportunities across sectors, markets, and emerging themes.",
+    "contactEmail": "inquiries@akufaicapitalandequities.com",
+    "contactAddress": "Abu Dhabi \u2022 Lagos \u2022 London",
+    "disclaimer": "The information on this website is provided for general informational purposes only and does not constitute investment advice, an offer, or a solicitation.",
+    "secondaryDisclaimer": "For aligned inquiries only. The information on this website is provided for general informational purposes only and does not constitute an offer, solicitation, or investment advice. \u00a9 2026 Akufai Capital & Equities LLC. All rights reserved.",
+    "socialLinks": {
+      "linkedin": "https://linkedin.com/company/akufai-capital",
+      "twitter": "https://x.com/akufaicapital",
+      "spotify": "https://spotify.com/show/akufai-conversations",
+      "apple": "https://podcasts.apple.com/podcast/akufai-conversations"
+    }
+  },
+  "heroSlides": [
+    {
+      "id": "slide-1",
+      "kicker": "Founder-Led Investment Firm",
+      "title": "Patient Capital",
+      "subtitle": "Akufai Capital & Equities LLC is a private investment firm led by Dr. Ali Garba, taking a venture-leaning and long-term approach to opportunities across sectors, markets, and emerging themes.",
+      "primaryCtaText": "About Akufai",
+      "primaryCtaLink": "/about",
+      "secondaryCtaText": "For Aligned Inquiries",
+      "secondaryCtaLink": "/contact",
+      "imageUrl": "/images/hero_patient_capital.png",
+      "order": 1,
+      "isActive": true
+    },
+    {
+      "id": "slide-2",
+      "kicker": "Durable Value Creation",
+      "title": "Long-term Value",
+      "subtitle": "Including African-founded and African-owned businesses with durable models, strong leadership, and real-world relevance.",
+      "primaryCtaText": "Investment Focus",
+      "primaryCtaLink": "/investment",
+      "secondaryCtaText": "For Aligned Inquiries",
+      "secondaryCtaLink": "/contact",
+      "imageUrl": "/images/hero_long_term_value.png",
+      "order": 2,
+      "isActive": true
+    },
+    {
+      "id": "slide-3",
+      "kicker": "Disciplined Orientation",
+      "title": "Selective Partnerships",
+      "subtitle": "We are especially interested in ventures with strong fundamentals, cross-border relevance, and the potential to solve meaningful social and economic challenges.",
+      "primaryCtaText": "Our Approach",
+      "primaryCtaLink": "/about",
+      "secondaryCtaText": "Get In Touch",
+      "secondaryCtaLink": "/contact",
+      "imageUrl": "/images/hero_selective_partnerships.png",
+      "order": 3,
+      "isActive": true
+    }
+  ],
+  "about": {
+    "headline": "About Akufai Capital & Equities",
+    "subheadline": "A founder-led firm with a selective lens and a disciplined, patient capital orientation.",
+    "overviewParagraphs": [
+      "Akufai Capital & Equities LLC is a private investment firm led by Dr. Ali Garba. The firm takes a selective, venture-leaning, and long-term approach to opportunities across sectors and geographies, with particular interest in ventures that combine commercial promise with real-world relevance.",
+      "Akufai is not designed to be everything to everyone. It is being shaped deliberately: first as a private investment firm, and over time as a broader advisory and investment platform built around aligned relationships, thoughtful partnerships, and selective engagement."
+    ],
+    "founder": {
+      "name": "Dr. Ali Garba",
+      "role": "Founder, Principal Investor, Chairman/CEO",
+      "titles": "Founder, Principal Investor, Chairman/CEO",
+      "portraitUrl": "/images/dr_ali_garba_portrait.png",
+      "whiteboardUrl": "/images/hero_long_term_value.png",
+      "bioParagraphs": [
+        "Dr. Ali Garba leads Akufai Capital & Equities with a perspective shaped by cross-border experience, strategic judgment, and a long-term view of value creation.",
+        "Akufai reflects his conviction that strong opportunities are often found where disciplined thinking, patient capital, and trusted relationships come together.",
+        "The firm's interests span multiple sectors, including healthtech, AI, fintech, infrastructure, and private growth-oriented opportunities. Akufai is especially attentive to ventures connected to African markets and to founders building businesses that respond to meaningful social and economic needs."
+      ],
+      "lensQuote": "A founder-led firm with a selective lens."
+    },
+    "approachTitle": "Our approach",
+    "approachParagraph1": "Akufai is deliberate by design. We value thoughtful evaluation over noise, long-term perspective over short-term signaling, and aligned relationships over volume.",
+    "approachParagraph2": "As the firm continues to evolve, it is building toward a broader advisory and investment platform model while remaining grounded in selective investment judgment.",
+    "values": [
+      {
+        "title": "Long-term orientation",
+        "description": "Prioritizing durable value creation and sustainable fundamentals over short-term signaling."
+      },
+      {
+        "title": "Selective partnership",
+        "description": "Choosing aligned partners and founders where deep mutual trust creates lasting leverage."
+      },
+      {
+        "title": "Cross-border perspective",
+        "description": "Bridging high-growth emerging economies with global capital, technology, and governance networks."
+      },
+      {
+        "title": "Strategic judgment",
+        "description": "Rigorous analysis and disciplined capital allocation informed by real operating experience."
+      },
+      {
+        "title": "Meaningful value creation",
+        "description": "Focusing on businesses that solve essential real-world challenges with commercially robust models."
+      }
+    ]
+  },
+  "contributors": [
+    {
+      "id": "faisal-umar",
+      "slug": "faisal-umar",
+      "name": "Faisal Umar",
+      "role": "Investment Analyst & Contributing Writer",
+      "avatarUrl": "",
+      "bio": "Faisal Umar is an investment analyst and writer with deep expertise in African capital markets, fintech infrastructure, and cross-border venture dynamics.",
+      "postCount": 4,
+      "episodeCount": 2,
+      "email": "faisal.umar@akufaicapitalandequities.com",
+      "linkedin": "https://linkedin.com",
+      "twitter": "https://x.com"
+    },
+    {
+      "id": "ahmad-tijjani",
+      "slug": "ahmad-tijjani",
+      "name": "Ahmad Tijjani",
+      "role": "Technology Strategist & Contributing Editor",
+      "avatarUrl": "",
+      "bio": "Ahmad Tijjani is a technology strategist and contributing editor at Akufai Capital, focused on AI, healthtech innovation, and emerging market technology adoption.",
+      "postCount": 3,
+      "episodeCount": 2,
+      "email": "ahmad.tijjani@akufaicapitalandequities.com",
+      "linkedin": "https://linkedin.com",
+      "twitter": "https://x.com"
+    },
+    {
+      "id": "prof-ferguson",
+      "slug": "prof-ferguson",
+      "name": "Professor Ferguson",
+      "role": "Academic Advisor & Macroeconomist",
+      "avatarUrl": "",
+      "bio": "Professor Ferguson is a distinguished economist and academic advisor to Akufai Capital, specializing in macroeconomic policy, cross-border trade flows, and emerging market capital structures.",
+      "postCount": 2,
+      "episodeCount": 2,
+      "email": "ferguson.advisor@akufaicapitalandequities.com",
+      "linkedin": "https://linkedin.com",
+      "twitter": "https://x.com"
+    }
+  ],
+  "investmentAreas": [
+    {
+      "id": "healthtech",
+      "slug": "healthtech",
+      "number": "01",
+      "title": "Healthtech",
+      "shortDescription": "Deploying capital into tech-enabled healthcare delivery, diagnostics, supply chain efficiency, and scalable medical solutions across high-need markets.",
+      "detailedDescription": "Healthcare delivery in emerging markets requires technology-enabled models that drastically reduce friction, democratize access to diagnostics, and optimize pharmaceutical supply chains. We partner with founders creating durable clinical and distribution solutions designed for local operational realities.",
+      "focusThemes": [
+        "Digital diagnostics & telemedicine",
+        "Pharmaceutical supply chain rails",
+        "Hospital management information systems",
+        "Accessible health insurance technology"
+      ],
+      "imageUrl": "/images/investment_healthtech.jpg",
+      "order": 1
+    },
+    {
+      "id": "artificial-intelligence",
+      "slug": "artificial-intelligence",
+      "number": "02",
+      "title": "Artificial Intelligence",
+      "shortDescription": "Backing pragmatic AI applications, foundational data infrastructure, and automation platforms solving enterprise bottlenecks in emerging economies.",
+      "detailedDescription": "We look beyond generative hype to focus on practical, enterprise-grade AI applications that drive measurable operational leverage. Our interest spans intelligent automation, localization of AI models for regional languages and workflows, and specialized data pipelines.",
+      "focusThemes": [
+        "Enterprise workflow automation",
+        "Local language processing & specialized LLMs",
+        "Data infrastructure & edge analytics",
+        "AI-driven operational risk assessment"
+      ],
+      "imageUrl": "/images/investment_ai.jpg",
+      "order": 2
+    },
+    {
+      "id": "fintech",
+      "slug": "fintech",
+      "number": "03",
+      "title": "Fintech",
+      "shortDescription": "Supporting next-generation payment infrastructure, cross-border liquidity rails, credit enablement, and digital financial inclusion systems.",
+      "detailedDescription": "Financial plumbing remains one of the largest compounding opportunities across the continent. We invest in foundational infrastructure that powers seamless cross-border settlement, SME credit scoring, and open banking architectures.",
+      "focusThemes": [
+        "Cross-border payment rails",
+        "B2B merchant settlement solutions",
+        "Alternative credit underwriting models",
+        "Treasury management & currency hedging"
+      ],
+      "imageUrl": "/images/investment_fintech.jpg",
+      "order": 3
+    },
+    {
+      "id": "infrastructure-enabling-systems",
+      "slug": "infrastructure-enabling-systems",
+      "number": "04",
+      "title": "Infrastructure & Enabling Systems",
+      "shortDescription": "Investing in the physical and digital backbones that unlock economic productivity\u2014logistics, connectivity, power, and supply chain rails.",
+      "detailedDescription": "Durable commercial ecosystems depend upon robust foundational systems. We seek out technology-augmented logistics networks, distributed clean energy architectures, and digital public infrastructure that enable commerce to scale sustainably.",
+      "focusThemes": [
+        "Tech-enabled cold chain and freight logistics",
+        "Decentralized clean power systems",
+        "Telecom & connectivity infrastructure",
+        "Agricultural aggregation & storage rails"
+      ],
+      "imageUrl": "/images/investment_infrastructure.jpg",
+      "order": 4
+    },
+    {
+      "id": "african-markets-cross-border",
+      "slug": "african-markets-cross-border",
+      "number": "05",
+      "title": "African Markets & Cross-border Ventures",
+      "shortDescription": "Catalyzing African-founded and African-owned enterprises with durable business models, robust leadership, and cross-border scalability.",
+      "detailedDescription": "We hold high conviction in African founders solving systemic challenges. We actively support companies expanding across multiple regional economic zones, helping navigate regulatory nuances, operational scaling, and cross-border market entry.",
+      "focusThemes": [
+        "Regional market expansion playbooks",
+        "Cross-border trade facilitation",
+        "Diaspora capital & remittance linkages",
+        "High-margin pan-African service platforms"
+      ],
+      "imageUrl": "/images/investment_african_markets.jpg",
+      "order": 5
+    },
+    {
+      "id": "private-deals-growth",
+      "slug": "private-deals-growth",
+      "number": "06",
+      "title": "Private Deals & Growth-oriented Opportunities",
+      "shortDescription": "Selectively participating in bespoke private transactions, growth equity rounds, and special situations with strong margins of safety.",
+      "detailedDescription": "Complementing our venture focus, we deploy patient capital into mature, profitable private enterprises seeking strategic expansion capital, recapitalization, or co-investment syndication with aligned long-term partners.",
+      "focusThemes": [
+        "Strategic co-investments with institutional partners",
+        "Structured growth equity",
+        "Management buyouts & succession transactions",
+        "Special situations with high intrinsic asset backing"
+      ],
+      "imageUrl": "/images/investment_private_deals.jpg",
+      "order": 6
+    }
+  ],
+  "podcastEpisodes": [
+    {
+      "id": "ep-1",
+      "slug": "inside-next-fintech-infrastructure-wave",
+      "episodeNumber": 1,
+      "title": "Episode Preview: Inside the Next Fintech Infrastructure Wave",
+      "category": "Fintech",
+      "publishDate": "2026-05-01",
+      "status": "scheduled",
+      "duration": "38 min",
+      "description": "Preview article and discussion for an upcoming episode exploring the evolution of cross-border settlement protocols, liquidity corridors, and digital banking rails across Africa.",
+      "audioUrl": "https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=corporate-ambient-112199.mp3",
+      "coverImageUrl": "/images/blog_fintech_wave.jpg",
+      "hostName": "Dr. Ali Garba",
+      "guestName": "Faisal Umar",
+      "guestRole": "Investment Analyst & Fintech Researcher",
+      "spotifyUrl": "https://open.spotify.com",
+      "appleUrl": "https://podcasts.apple.com",
+      "keyTakeaways": [
+        "Why layer-1 payment switches are moving from national silos to regional interoperability.",
+        "The role of stable currency corridors in mitigating FX volatility for cross-border traders.",
+        "How compliance and automated KYC infrastructure unlock institutional liquidity."
+      ],
+      "transcript": "Welcome to Akufai Conversations. In this preview episode, Dr. Ali Garba and Faisal Umar break down the structural shifts underpinning the next generation of financial infrastructure across emerging markets..."
+    },
+    {
+      "id": "ep-2",
+      "slug": "cross-border-founder-execution-playbook",
+      "episodeNumber": 2,
+      "title": "Episode Release: Cross-Border Founder Execution Playbook",
+      "category": "Cross-Border",
+      "publishDate": "2026-04-30",
+      "status": "published",
+      "duration": "45 min",
+      "description": "This post was first published as coming soon and later updated with released audio. A strategic discussion on multi-jurisdiction scaling, unit economics, and team governance across African markets.",
+      "audioUrl": "https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8c8a73467.mp3?filename=inspiring-cinematic-ambient-116199.mp3",
+      "coverImageUrl": "/images/blog_crossborder_playbook.jpg",
+      "hostName": "Dr. Ali Garba",
+      "guestName": "Professor Ferguson & Strategic Operators",
+      "guestRole": "Academic Advisor & Macroeconomist",
+      "spotifyUrl": "https://open.spotify.com",
+      "appleUrl": "https://podcasts.apple.com",
+      "keyTakeaways": [
+        "Navigating divergent regulatory frameworks without overburdening operating cash flow.",
+        "Building decentralized leadership teams that maintain cultural alignment across borders.",
+        "Capital allocation discipline during currency devaluation cycles."
+      ],
+      "transcript": "In this episode of Akufai Conversations, we explore the tactical realities facing founders who expand beyond single-country markets..."
+    }
+  ],
+  "blogPosts": [
+    {
+      "id": "post-1",
+      "slug": "inside-next-fintech-infrastructure-wave",
+      "title": "Episode Preview: Inside the Next Fintech Infrastructure Wave",
+      "category": "Podcast",
+      "publishDate": "May 1, 2026",
+      "status": "published",
+      "excerpt": "Preview article for an upcoming episode with waitlist enabled. Exploring the technical and capital foundations powering the next era of cross-border financial systems.",
+      "contentHtml": "\n        <p>Across emerging markets, the first decade of fintech focused on consumer-facing digital wallets and simple payment gateways. While these interfaces onboarded millions of users, the underlying infrastructure remained constrained by legacy clearing systems and fragmented regulatory rails.</p>\n        \n        <h2>The Shift to Foundational Plumbing</h2>\n        <p>Today, a deeper transformation is taking place. Investment and engineering capital are gravitating toward foundational plumbing: real-time gross settlement networks, automated treasury and FX routing, and interoperable compliance protocols.</p>\n        \n        <p>At Akufai Capital, our lens centers on companies building durable platforms rather than transient consumer arbitrage. When payment infrastructure achieves true cross-border reliability, trade velocity increases exponentially, creating sustainable long-term economic compounding.</p>\n        \n        <blockquote>\n          \"Durable enterprise value is generated when fundamental market frictions are resolved at the infrastructural layer.\"\n        </blockquote>\n        \n        <h2>Key Strategic Inquiries</h2>\n        <ul>\n          <li>How can multi-currency settlement rails reduce working capital drag for cross-border merchants?</li>\n          <li>What regulatory harmonizations are required to foster regional clearing houses?</li>\n          <li>Where do private capital and sovereign infrastructure intersect most effectively?</li>\n        </ul>\n        \n        <p>Listen to the full companion episode on <em>Akufai Conversations</em> for an in-depth conversation between Dr. Ali Garba and our investment team.</p>\n      ",
+      "coverImageUrl": "/images/blog_fintech_wave.jpg",
+      "authorId": "faisal-umar",
+      "readTime": "5 min read",
+      "isFeatured": true
+    },
+    {
+      "id": "post-2",
+      "slug": "cross-border-founder-execution-playbook",
+      "title": "Episode Release: Cross-Border Founder Execution Playbook",
+      "category": "Podcast",
+      "publishDate": "April 30, 2026",
+      "status": "published",
+      "excerpt": "This post was first published as coming soon and later updated with released audio. Key insights on navigating regulatory diversity, team synchronization, and capital efficiency.",
+      "contentHtml": "\n        <p>Building a successful enterprise in a single market is notoriously difficult; expanding that enterprise across borders in Africa requires a fundamentally distinct strategic playbook.</p>\n        \n        <h2>1. Contextual Localization vs. Core Standardization</h2>\n        <p>The most resilient cross-border operators maintain a strict division between what must remain standard (codebase architecture, governance principles, treasury controls) and what must be ruthlessly localized (customer relationships, field operations, regulatory compliance).</p>\n        \n        <h2>2. Foreign Exchange Risk as an Operational Core Competency</h2>\n        <p>In cross-border ventures, currency fluctuations cannot be treated as an accounting afterthought. Disciplined founders design dynamic pricing, local supply sourcing, and proactive treasury hedging directly into their everyday unit economics.</p>\n        \n        <h2>3. Patient Capital as a Competitive Advantage</h2>\n        <p>Venture-backed models that prioritize hyper-growth at the expense of positive unit economics often break when crossing borders. Conversely, patient capital allows founders to navigate regulatory licensing timelines and build genuine local trust without existential runway anxiety.</p>\n      ",
+      "coverImageUrl": "/images/blog_crossborder_playbook.jpg",
+      "authorId": "faisal-umar",
+      "readTime": "7 min read",
+      "isFeatured": true
+    },
+    {
+      "id": "post-3",
+      "slug": "ai-future-healthcare-emerging-economies",
+      "title": "AI and the Future of Healthcare in Emerging Economies",
+      "category": "Health",
+      "publishDate": "April 29, 2026",
+      "status": "published",
+      "excerpt": "How artificial intelligence is reshaping healthcare delivery in markets where it matters most, bridging clinical shortages and optimizing diagnostics.",
+      "contentHtml": "\n        <p>In many regions across emerging markets, the ratio of specialized physicians to citizens remains severely unbalanced. Traditional infrastructure development\u2014building brick-and-mortar hospitals and training thousands of specialists\u2014is vital, but cannot match immediate population needs alone.</p>\n        \n        <h2>Augmenting Frontline Clinical Capability</h2>\n        <p>Artificial intelligence offers its most transformative social and commercial return not in replacing doctors, but in empowering frontline healthcare workers and general practitioners. Tech-assisted imaging, automated triage systems, and symptom-analysis engines enable primary healthcare clinics to deliver secondary-level diagnostic accuracy.</p>\n        \n        <h2>Supply Chain Optimization</h2>\n        <p>Beyond diagnostics, predictive models are fundamentally improving pharmaceutical logistics. By analyzing seasonal disease outbreaks and localized demand patterns, AI-driven inventory systems minimize stock-outs of essential antibiotics and vaccines in remote clinics.</p>\n        \n        <p>At Akufai Capital, we evaluate healthtech ventures based on clinical validity, unit economics, and proven integration with existing public and private health workflows.</p>\n      ",
+      "coverImageUrl": "/images/blog_healthcare_ai.jpg",
+      "authorId": "ahmad-tijjani",
+      "readTime": "6 min read",
+      "isFeatured": true
+    }
+  ],
+  "media": [
+    {
+      "id": "med-1",
+      "filename": "logo.png",
+      "url": "/images/logo.png",
+      "mimeType": "image/png",
+      "size": 54743,
+      "uploadedAt": "2026-05-01T08:00:00Z"
+    },
+    {
+      "id": "med-2",
+      "filename": "dr_ali_garba_portrait.png",
+      "url": "/images/dr_ali_garba_portrait.png",
+      "mimeType": "image/png",
+      "size": 44036,
+      "uploadedAt": "2026-05-01T08:00:00Z"
+    }
+  ]
+}
