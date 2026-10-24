@@ -12,9 +12,10 @@
   --brand-gold: #b6960b;
   --brand-gold-hover: #9e8109;
   --brand-gold-light: #d4b429;
-  --brand-gold-subtle: #fcf8e8;
+  --brand-gold-subtle: #fcf6df;
+  --brand-gold-ivory: #fdfaf2;
   --brand-gold-accent: #c8a612;
-  --brand-gold-border: #e6d58f;
+  --brand-gold-border: #dec668;
   --neutral-charcoal: #1e293b;
   --neutral-body: #334155;
   --neutral-muted: #64748b;
@@ -32,9 +33,10 @@
   --color-brand-gold: #b6960b;
   --color-brand-gold-hover: #9e8109;
   --color-brand-gold-light: #d4b429;
-  --color-brand-gold-subtle: #fcf8e8;
+  --color-brand-gold-subtle: #fcf6df;
+  --color-brand-gold-ivory: #fdfaf2;
   --color-brand-gold-accent: #c8a612;
-  --color-brand-gold-border: #e6d58f;
+  --color-brand-gold-border: #dec668;
 }
 
 body {
@@ -53,10 +55,10 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.02em;
 }
 
-/* Custom selection styling */
+/* Custom selection styling with rich gold & dark green */
 ::selection {
-  background-color: var(--brand-green);
-  color: #ffffff;
+  background-color: var(--brand-gold);
+  color: #042f1b;
 }
 
 /* Smooth scrolling */
@@ -64,26 +66,108 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar with golden thumb accent */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #f8fafc;
+  background: #fdfaf2;
 }
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  background: #dec668;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--brand-green);
+  background: var(--brand-gold);
 }
 
 /* Accessible focus ring */
 :focus-visible {
-  outline: 2px solid var(--brand-green);
+  outline: 2px solid var(--brand-gold);
   outline-offset: 2px;
+}
+
+/* Keyframe Animations for Golden Luxury Aesthetic */
+@keyframes goldPulseGlow {
+  0%, 100% {
+    opacity: 0.65;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.04);
+  }
+}
+
+@keyframes goldShimmerSweep {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Reusable Luxury Gold Surfaces, Cards & Buttons */
+.gold-surface-wash {
+  background: linear-gradient(180deg, #fdfaf2 0%, #f9f0d1 50%, #fdfaf2 100%);
+}
+
+.gold-card-surface {
+  background: linear-gradient(145deg, #ffffff 0%, #fdfaf0 65%, #f8efcf 100%);
+  border-color: #dec668;
+}
+
+.gold-glow-card {
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 0.35s ease;
+}
+
+.gold-glow-card:hover {
+  transform: translateY(-5px);
+  border-color: #b6960b;
+  box-shadow: 0 16px 36px -8px rgba(182, 150, 11, 0.26),
+              0 0 0 1px rgba(182, 150, 11, 0.45);
+}
+
+.gold-btn-luxury {
+  background: linear-gradient(135deg, #d4b429 0%, #b6960b 55%, #9e8109 100%);
+  color: #042f1b;
+  border: 1px solid #e5c846;
+  box-shadow: 0 6px 20px -4px rgba(182, 150, 11, 0.45),
+              inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.gold-btn-luxury:hover {
+  background: linear-gradient(135deg, #dfc138 0%, #c4a20e 55%, #8f7506 100%);
+  color: #042f1b;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px -4px rgba(182, 150, 11, 0.6),
+              0 0 16px rgba(212, 180, 41, 0.35),
+              inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.green-gold-btn {
+  background: linear-gradient(135deg, #036c3e 0%, #02522f 100%);
+  color: #ffffff;
+  border: 1px solid #d4b429;
+  box-shadow: 0 6px 18px -4px rgba(3, 108, 62, 0.35);
+  transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.green-gold-btn:hover {
+  background: linear-gradient(135deg, #02522f 0%, #042f1b 100%);
+  border-color: #e5c846;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px -4px rgba(182, 150, 11, 0.45),
+              0 0 14px rgba(212, 180, 41, 0.28);
+}
+
+.gold-ambient-glow {
+  animation: goldPulseGlow 6s ease-in-out infinite;
 }
 
 /* Animations respect reduced motion */
@@ -93,5 +177,10 @@ html {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+  .gold-glow-card:hover,
+  .gold-btn-luxury:hover,
+  .green-gold-btn:hover {
+    transform: none !important;
   }
 }

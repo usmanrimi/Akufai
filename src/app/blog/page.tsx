@@ -20,10 +20,10 @@ export default async function BlogPage() {
   const authorMap = new Map(contributors.map((c) => [c.id, c]));
 
   return (
-    <div className="bg-white">
-      {/* 1. Approved High-Contrast Green Brand Hero */}
-      <section className="py-20 lg:py-28 bg-[#061c11] text-white relative overflow-hidden border-b-2 border-[#b6960b]/40">
-        <div className="absolute inset-0 bg-radial from-[#036c3e]/35 via-transparent to-transparent pointer-events-none" />
+    <div className="gold-surface-wash">
+      {/* 1. Approved High-Contrast Green Brand Hero with Ambient Golden Glow */}
+      <section className="py-20 lg:py-28 bg-[#061c11] text-white relative overflow-hidden border-b-2 border-[#b6960b]">
+        <div className="absolute inset-0 bg-radial from-[#b6960b]/28 via-[#036c3e]/20 to-transparent pointer-events-none gold-ambient-glow" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 relative z-10">
           <h1
             style={{ color: '#ffffff' }}
@@ -32,8 +32,8 @@ export default async function BlogPage() {
             From the desk of Akufai
           </h1>
           <p
-            style={{ color: '#e6f4ed' }}
-            className="text-lg sm:text-xl !text-emerald-50/95 leading-relaxed max-w-2xl mx-auto font-medium"
+            style={{ color: '#f8efcf' }}
+            className="text-lg sm:text-xl !text-[#f8efcf] leading-relaxed max-w-2xl mx-auto font-medium"
           >
             Occasional reflections on investing, enterprise, market perspective, and the kinds of questions that shape long-term conviction.
           </p>
@@ -48,17 +48,17 @@ export default async function BlogPage() {
             return (
               <article
                 key={post.id}
-                className="bg-white rounded-2xl border border-slate-200/90 overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between group hover:border-[#b6960b]"
+                className="gold-card-surface gold-glow-card rounded-2xl border border-[#dec668] overflow-hidden shadow-xs flex flex-col justify-between group"
               >
                 {/* Cover Image */}
-                <div className="relative aspect-[16/10] bg-slate-100 overflow-hidden">
+                <div className="relative aspect-[16/10] bg-slate-100 overflow-hidden border-b border-[#dec668]/50">
                   <Image
                     src={post.coverImageUrl || '/images/blog_fintech_wave.jpg'}
                     alt={post.title}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-xs px-2.5 py-1 rounded-md text-xs font-bold text-[#036c3e] border border-[#b6960b]/30">
+                  <div className="absolute top-3 left-3 bg-gradient-to-r from-[#fcf6df] to-[#f7ebc1] px-2.5 py-1 rounded-md text-xs font-bold text-[#042f1b] border border-[#b6960b]/60">
                     {post.category}
                   </div>
                 </div>

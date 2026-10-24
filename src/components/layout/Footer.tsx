@@ -44,14 +44,17 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#061c11] text-white border-t-2 border-[#b6960b]/40">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-18">
+    <footer className="relative bg-[#061c11] text-white border-t-2 border-[#b6960b] overflow-hidden">
+      {/* Subtle Ambient Golden Glow at Top of Footer */}
+      <div className="absolute top-0 inset-x-0 h-48 bg-radial from-[#b6960b]/20 via-transparent to-transparent pointer-events-none gold-ambient-glow" />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-18">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-14 items-start">
           {/* Column 1: Brand & Larger Logo */}
           <div className="md:col-span-5 space-y-5">
             <Link
               href="/"
-              className="inline-block bg-white rounded-xl p-2 sm:p-2.5 border border-[#b6960b]/30 shadow-sm hover:opacity-95 transition-opacity"
+              className="inline-block bg-white rounded-xl p-2 sm:p-2.5 border-2 border-[#d4b429]/70 shadow-[0_0_28px_rgba(182,150,11,0.25)] hover:shadow-[0_0_36px_rgba(212,180,41,0.4)] hover:-translate-y-0.5 transition-all duration-300"
             >
               <div className="relative h-18 w-56 sm:h-22 sm:w-72 lg:h-24 lg:w-80">
                 <Image
@@ -72,37 +75,37 @@ export default function Footer() {
             <h3 className="text-xs font-bold uppercase tracking-wider text-[#d4b429]">Navigation</h3>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <Link href="/" className="text-slate-300 hover:text-[#d4b429] transition-colors">
+                <Link href="/" className="text-slate-300 hover:text-[#d4b429] hover:translate-x-1 inline-block transition-all duration-200">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-slate-300 hover:text-[#d4b429] transition-colors">
+                <Link href="/about" className="text-slate-300 hover:text-[#d4b429] hover:translate-x-1 inline-block transition-all duration-200">
                   About
                 </Link>
               </li>
               <li>
-                <Link href="/investment" className="text-slate-300 hover:text-[#d4b429] transition-colors">
+                <Link href="/investment" className="text-slate-300 hover:text-[#d4b429] hover:translate-x-1 inline-block transition-all duration-200">
                   Investment Focus
                 </Link>
               </li>
               <li>
-                <Link href="/podcast" className="text-slate-300 hover:text-[#d4b429] transition-colors">
+                <Link href="/podcast" className="text-slate-300 hover:text-[#d4b429] hover:translate-x-1 inline-block transition-all duration-200">
                   Podcast
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-slate-300 hover:text-[#d4b429] transition-colors">
+                <Link href="/blog" className="text-slate-300 hover:text-[#d4b429] hover:translate-x-1 inline-block transition-all duration-200">
                   Blog
                 </Link>
               </li>
               <li>
-                <Link href="/about#contributors" className="text-slate-300 hover:text-[#d4b429] transition-colors">
+                <Link href="/about#contributors" className="text-slate-300 hover:text-[#d4b429] hover:translate-x-1 inline-block transition-all duration-200">
                   Authors & Contributors
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-slate-300 hover:text-[#d4b429] transition-colors">
+                <Link href="/contact" className="text-slate-300 hover:text-[#d4b429] hover:translate-x-1 inline-block transition-all duration-200">
                   Contact
                 </Link>
               </li>
@@ -123,13 +126,13 @@ export default function Footer() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Your email address"
                   required
-                  className="flex-1 px-4 py-2.5 text-sm bg-[#0b2919] border border-[#b6960b]/30 rounded-lg text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#b6960b] focus:border-transparent transition-all"
+                  className="flex-1 px-4 py-2.5 text-sm bg-[#0b2919] border border-[#b6960b]/50 rounded-lg text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#d4b429] focus:border-transparent transition-all"
                   aria-label="Email address for updates"
                 />
                 <button
                   type="submit"
                   disabled={status === 'loading'}
-                  className="inline-flex items-center justify-center gap-1.5 px-5 py-2.5 text-sm font-bold text-[#042f1b] bg-[#b6960b] hover:bg-[#d4b429] disabled:bg-slate-600 rounded-lg shadow-sm transition-all whitespace-nowrap active:scale-[0.98] group cursor-pointer"
+                  className="gold-btn-luxury inline-flex items-center justify-center gap-1.5 px-5 py-2.5 text-sm font-bold disabled:bg-slate-600 rounded-lg whitespace-nowrap active:scale-[0.98] group cursor-pointer"
                 >
                   {status === 'loading' ? (
                     <Loader2 className="w-4 h-4 animate-spin" />
@@ -143,7 +146,7 @@ export default function Footer() {
               </div>
 
               {status === 'success' && (
-                <div className="flex items-center gap-2 text-xs text-[#d4b429] bg-[#0b2919] p-2.5 rounded-md border border-[#b6960b]/40">
+                <div className="flex items-center gap-2 text-xs text-[#d4b429] bg-[#0b2919] p-2.5 rounded-md border border-[#b6960b]/60">
                   <CheckCircle2 className="w-4 h-4 shrink-0" />
                   <span>{message}</span>
                 </div>
@@ -160,7 +163,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar: Cleaned without disclaimer banner, admin portal, or aligned inquiries label */}
-        <div className="mt-12 pt-8 border-t border-[#123823] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        <div className="mt-12 pt-8 border-t border-[#b6960b]/30 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-300">
           <p>
             © 2026 Akufai Capital & Equities LLC. All rights reserved.
           </p>

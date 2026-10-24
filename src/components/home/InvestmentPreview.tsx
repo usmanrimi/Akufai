@@ -10,11 +10,14 @@ interface InvestmentPreviewProps {
 
 export default function InvestmentPreview({ areas }: InvestmentPreviewProps) {
   return (
-    <section className="py-16 lg:py-24 bg-white border-b border-slate-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <section className="relative py-16 lg:py-24 bg-white border-b border-[#dec668]/50 overflow-hidden">
+      {/* Subtle Ambient Gold Center Glow */}
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[640px] h-[360px] bg-radial from-[#d4b429]/12 via-transparent to-transparent rounded-full blur-3xl pointer-events-none" />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         {/* Section Header without small eyebrow title */}
         <div className="max-w-3xl mx-auto text-center space-y-3">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#036c3e] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#042f1b] tracking-tight">
             What we look for
           </h2>
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
@@ -27,13 +30,13 @@ export default function InvestmentPreview({ areas }: InvestmentPreviewProps) {
           {areas.map((area) => (
             <div
               key={area.id}
-              className="bg-white rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between overflow-hidden group hover:border-[#b6960b] relative"
+              className="gold-card-surface gold-glow-card rounded-2xl border border-[#dec668] shadow-xs flex flex-col justify-between overflow-hidden group relative"
             >
-              {/* Subtle Top Gold Accent */}
-              <div className="absolute top-0 inset-x-0 h-0.5 bg-gradient-to-r from-transparent via-[#b6960b]/60 to-transparent z-10" />
+              {/* Prominent Top Metallic Gold Accent */}
+              <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-[#8f7506] via-[#e5c846] to-[#8f7506] z-10" />
 
               {/* Image thumbnail */}
-              <div className="relative h-48 w-full bg-slate-100 overflow-hidden">
+              <div className="relative h-48 w-full bg-slate-100 overflow-hidden border-b border-[#dec668]/50">
                 <Image
                   src={area.imageUrl || '/images/hero_patient_capital.png'}
                   alt={area.title}
@@ -41,7 +44,7 @@ export default function InvestmentPreview({ areas }: InvestmentPreviewProps) {
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute top-3 right-3 bg-white/95 backdrop-blur-xs px-3 py-1 rounded-lg text-sm font-mono font-black text-[#b6960b] border border-[#e6d58f] shadow-xs">
+                <div className="absolute top-3 right-3 bg-gradient-to-br from-[#d4b429] to-[#b6960b] px-3 py-1 rounded-lg text-sm font-mono font-black text-[#042f1b] border border-[#fff3b8] shadow-[0_4px_14px_rgba(182,150,11,0.4)]">
                   {area.number}
                 </div>
               </div>
@@ -49,7 +52,7 @@ export default function InvestmentPreview({ areas }: InvestmentPreviewProps) {
               {/* Content */}
               <div className="p-6 flex-1 flex flex-col justify-between space-y-5">
                 <div className="space-y-2">
-                  <h3 className="text-xl font-bold text-slate-900 group-hover:text-[#036c3e] transition-colors">
+                  <h3 className="text-xl font-bold text-[#042f1b] group-hover:text-[#036c3e] transition-colors">
                     {area.title}
                   </h3>
                   <p className="text-sm text-slate-600 leading-relaxed line-clamp-3">
@@ -58,13 +61,13 @@ export default function InvestmentPreview({ areas }: InvestmentPreviewProps) {
                 </div>
 
                 {/* Bottom CTA neatly positioned at the bottom of the card */}
-                <div className="pt-3 border-t border-slate-100">
+                <div className="pt-3 border-t border-[#dec668]/50">
                   <Link
                     href={`/investment#${area.slug}`}
-                    className="w-full inline-flex items-center justify-between px-3.5 py-2 rounded-lg bg-[#f2f9f5]/70 hover:bg-[#036c3e] text-xs font-semibold text-[#036c3e] hover:text-white border border-[#d6ebe0] hover:border-[#036c3e] transition-all group/cta"
+                    className="w-full inline-flex items-center justify-between px-3.5 py-2.5 rounded-lg bg-gradient-to-r from-[#fcf6df] to-[#f7ebc1] hover:from-[#d4b429] hover:to-[#b6960b] text-xs font-bold text-[#042f1b] border border-[#dec668] shadow-2xs transition-all duration-300 group/cta"
                   >
                     <span>Explore Thesis & Criteria</span>
-                    <ArrowUpRight className="w-3.5 h-3.5 text-[#b6960b] group-hover/cta:text-[#d4b429] transition-transform duration-200 group-hover/cta:translate-x-0.5 group-hover/cta:-translate-y-0.5" />
+                    <ArrowUpRight className="w-3.5 h-3.5 text-[#042f1b] transition-transform duration-200 group-hover/cta:translate-x-0.5 group-hover/cta:-translate-y-0.5" />
                   </Link>
                 </div>
               </div>
@@ -80,7 +83,7 @@ export default function InvestmentPreview({ areas }: InvestmentPreviewProps) {
           <div>
             <Link
               href="/investment"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-bold text-[#042f1b] bg-[#b6960b] hover:bg-[#9e8109] hover:text-white border border-[#b6960b] rounded-lg shadow-sm transition-all duration-200 active:scale-[0.98] group"
+              className="gold-btn-luxury inline-flex items-center justify-center gap-2 px-7 py-3.5 text-sm font-bold rounded-lg active:scale-[0.98] group"
             >
               <span>Learn More About Our Investment Focus</span>
               <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />

@@ -24,11 +24,11 @@ const FRAMEWORK_CARDS: FrameworkCard[] = [
     description:
       'Long-term, patient equity aligned with operational founders solving systemic real-world needs across key economic sectors.',
     icon: Scale,
-    accentColor: '#036c3e',
-    bgGradient: 'from-[#f2f9f5]/80 via-white to-white',
-    borderColor: 'border-[#d6ebe0] hover:border-[#036c3e]',
-    iconBg: 'bg-[#f2f9f5]',
-    iconColor: 'text-[#036c3e]',
+    accentColor: '#b6960b',
+    bgGradient: 'from-[#fcf6df] via-white to-[#f2f9f5]',
+    borderColor: 'border-[#dec668] hover:border-[#b6960b]',
+    iconBg: 'bg-gradient-to-br from-[#d4b429] to-[#b6960b]',
+    iconColor: 'text-[#042f1b]',
   },
   {
     id: 'cross-border-scope',
@@ -38,10 +38,10 @@ const FRAMEWORK_CARDS: FrameworkCard[] = [
       'Connecting dynamic African economic hubs with international capital, strategic knowledge, and global execution networks.',
     icon: Globe,
     accentColor: '#b6960b',
-    bgGradient: 'from-[#fcf8e8]/70 via-white to-white',
-    borderColor: 'border-[#e6d58f] hover:border-[#b6960b]',
-    iconBg: 'bg-[#fcf8e8]',
-    iconColor: 'text-[#b6960b]',
+    bgGradient: 'from-[#faefca] via-[#fdf9ec] to-white',
+    borderColor: 'border-[#b6960b]/80 hover:border-[#b6960b]',
+    iconBg: 'bg-gradient-to-br from-[#d4b429] to-[#b6960b]',
+    iconColor: 'text-[#042f1b]',
   },
   {
     id: 'target-sectors',
@@ -50,11 +50,11 @@ const FRAMEWORK_CARDS: FrameworkCard[] = [
     description:
       'Healthtech, Artificial Intelligence, Fintech, Infrastructure & Enabling Systems, Cross-border & Private Growth Deals.',
     icon: Sparkles,
-    accentColor: '#036c3e',
-    bgGradient: 'from-[#f2f9f5]/80 via-white to-white',
-    borderColor: 'border-[#d6ebe0] hover:border-[#036c3e]',
-    iconBg: 'bg-[#f2f9f5]',
-    iconColor: 'text-[#036c3e]',
+    accentColor: '#b6960b',
+    bgGradient: 'from-[#fcf6df] via-white to-[#f2f9f5]',
+    borderColor: 'border-[#dec668] hover:border-[#b6960b]',
+    iconBg: 'bg-gradient-to-br from-[#d4b429] to-[#b6960b]',
+    iconColor: 'text-[#042f1b]',
   },
 ];
 
@@ -84,21 +84,24 @@ export default function InstitutionalFrameworkCards() {
                 toggleCard(card.id);
               }
             }}
-            className={`group relative rounded-2xl p-7 lg:p-8 bg-gradient-to-b ${card.bgGradient} border ${card.borderColor} shadow-xs hover:shadow-lg transition-all duration-300 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#036c3e] flex flex-col justify-between text-left`}
+            className={`gold-glow-card group relative rounded-2xl p-7 lg:p-8 bg-gradient-to-b ${card.bgGradient} border ${card.borderColor} shadow-xs cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#b6960b] flex flex-col justify-between text-left overflow-hidden`}
           >
+            {/* Top Metallic Gold Bar */}
+            <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-[#8f7506] via-[#e5c846] to-[#8f7506]" />
+
             {/* Top Row: Icon & Interactive Hint */}
             <div className="flex items-center justify-between">
               <div
-                className={`w-12 h-12 rounded-xl ${card.iconBg} ${card.iconColor} border border-black/5 flex items-center justify-center shadow-xs transition-transform duration-300 group-hover:scale-110`}
+                className={`w-12 h-12 rounded-xl ${card.iconBg} ${card.iconColor} border border-[#fff3b8] flex items-center justify-center shadow-[0_4px_14px_rgba(182,150,11,0.35)] transition-transform duration-300 group-hover:scale-110`}
               >
                 <Icon className="w-6 h-6" />
               </div>
 
-              <div className="md:hidden flex items-center gap-1 text-xs font-semibold text-slate-500 group-hover:text-[#036c3e]">
+              <div className="md:hidden flex items-center gap-1 text-xs font-semibold text-[#8f7506] group-hover:text-[#042f1b]">
                 <span>{isExpanded ? 'Collapse' : 'Details'}</span>
                 <ChevronDown
                   className={`w-4 h-4 transition-transform duration-200 ${
-                    isExpanded ? 'rotate-180 text-[#036c3e]' : ''
+                    isExpanded ? 'rotate-180 text-[#b6960b]' : ''
                   }`}
                 />
               </div>
@@ -106,10 +109,10 @@ export default function InstitutionalFrameworkCards() {
 
             {/* Title & Tagline - Prominently Displayed without 01/02/03 Numbers */}
             <div className="mt-5 space-y-1.5">
-              <h3 className="text-xl sm:text-2xl font-extrabold text-[#036c3e] group-hover:text-[#02522f] transition-colors">
+              <h3 className="text-xl sm:text-2xl font-extrabold text-[#042f1b] group-hover:text-[#036c3e] transition-colors">
                 {card.title}
               </h3>
-              <p className="text-xs font-semibold text-[#b6960b] uppercase tracking-wider">
+              <p className="text-xs font-bold text-[#8f7506] uppercase tracking-wider">
                 {card.tagline}
               </p>
             </div>

@@ -20,33 +20,33 @@ const APPROACH_CARDS: ApproachCardItem[] = [
     title: 'Thoughtful Evaluation',
     description:
       'Rigorous analysis and disciplined capital allocation prioritizing signal over market noise.',
-    bgStyle: 'bg-gradient-to-br from-[#f2f9f5] via-white to-white',
-    titleColor: 'text-[#036c3e] group-hover:text-[#02522f]',
+    bgStyle: 'bg-gradient-to-br from-[#fcf6df] via-white to-[#f2f9f5]',
+    titleColor: 'text-[#042f1b] group-hover:text-[#036c3e]',
     descColor: 'text-slate-700',
-    borderStyle: 'border-[#d6ebe0] hover:border-[#036c3e]',
-    accentBar: 'bg-gradient-to-r from-[#036c3e] via-[#b6960b] to-[#036c3e]',
+    borderStyle: 'border-[#dec668] hover:border-[#b6960b]',
+    accentBar: 'bg-gradient-to-r from-[#b6960b] via-[#e5c846] to-[#036c3e]',
   },
   {
     id: 'perspective',
     title: 'Long-term Perspective',
     description:
       'Patient capital structured to allow resilient compound growth without artificial pressure.',
-    bgStyle: 'bg-gradient-to-br from-[#fcf8e8] via-white to-white',
-    titleColor: 'text-[#036c3e] group-hover:text-[#02522f]',
+    bgStyle: 'bg-gradient-to-br from-[#faefca] via-[#fdf9ec] to-white',
+    titleColor: 'text-[#042f1b] group-hover:text-[#8f7506]',
     descColor: 'text-slate-700',
-    borderStyle: 'border-[#e6d58f] hover:border-[#b6960b]',
-    accentBar: 'bg-gradient-to-r from-[#b6960b] via-[#036c3e] to-[#b6960b]',
+    borderStyle: 'border-[#b6960b]/80 hover:border-[#b6960b]',
+    accentBar: 'bg-gradient-to-r from-[#8f7506] via-[#e5c846] to-[#8f7506]',
   },
   {
     id: 'relationships',
     title: 'Aligned Relationships',
     description:
       'Deep mutual trust with visionary founders tackling real-world socioeconomic challenges.',
-    bgStyle: 'bg-gradient-to-br from-[#f2f9f5] via-white to-white',
-    titleColor: 'text-[#036c3e] group-hover:text-[#02522f]',
+    bgStyle: 'bg-gradient-to-br from-[#fcf6df] via-white to-[#f2f9f5]',
+    titleColor: 'text-[#042f1b] group-hover:text-[#036c3e]',
     descColor: 'text-slate-700',
-    borderStyle: 'border-[#d6ebe0] hover:border-[#036c3e]',
-    accentBar: 'bg-gradient-to-r from-[#036c3e] via-[#b6960b] to-[#036c3e]',
+    borderStyle: 'border-[#dec668] hover:border-[#b6960b]',
+    accentBar: 'bg-gradient-to-r from-[#036c3e] via-[#e5c846] to-[#b6960b]',
   },
 ];
 
@@ -75,10 +75,10 @@ export default function InteractiveApproachCards() {
                 toggleCard(card.id);
               }
             }}
-            className={`group relative rounded-2xl p-7 lg:p-8 ${card.bgStyle} border ${card.borderStyle} shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#036c3e] overflow-hidden flex flex-col justify-between`}
+            className={`gold-glow-card group relative rounded-2xl p-7 lg:p-8 ${card.bgStyle} border ${card.borderStyle} shadow-sm cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#b6960b] overflow-hidden flex flex-col justify-between`}
           >
             {/* Top Accent Indicator */}
-            <div className={`absolute top-0 inset-x-0 h-1 ${card.accentBar}`} />
+            <div className={`absolute top-0 inset-x-0 h-1.5 ${card.accentBar}`} />
 
             {/* Header without secondary subtitle labels */}
             <div className="space-y-2">

@@ -10,12 +10,12 @@ interface FounderSectionProps {
 
 export default function FounderSection({ about }: FounderSectionProps) {
   return (
-    <section className="py-16 lg:py-24 bg-white border-b border-slate-100">
+    <section className="py-16 lg:py-24 gold-surface-wash border-b border-[#dec668]/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Prominent High-Resolution Founder Action Scene */}
           <div className="lg:col-span-6 order-2 lg:order-1">
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl border-2 border-[#b6960b]/40 bg-slate-50 group">
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border-2 border-[#b6960b] ring-4 ring-[#b6960b]/15 shadow-[0_18px_42px_-10px_rgba(182,150,11,0.3)] bg-slate-50 group transition-shadow duration-500 hover:shadow-[0_22px_50px_-8px_rgba(182,150,11,0.45)]">
               <Image
                 src="/images/founder_business_meeting.jpg"
                 alt="Dr. Ali Garba leading strategic investment engagement"
@@ -23,10 +23,10 @@ export default function FounderSection({ about }: FounderSectionProps) {
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover object-top sm:object-center transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none" />
               <div className="absolute bottom-5 left-5 right-5 text-white">
                 <p className="text-base font-bold drop-shadow-xs">{about.founder.name}</p>
-                <p className="text-xs text-[#d4b429] font-medium drop-shadow-xs">{about.founder.role}</p>
+                <p className="text-xs text-[#d4b429] font-semibold drop-shadow-xs">{about.founder.role}</p>
               </div>
             </div>
           </div>
@@ -34,12 +34,12 @@ export default function FounderSection({ about }: FounderSectionProps) {
           {/* Editorial Text Content */}
           <div className="lg:col-span-6 order-1 lg:order-2 space-y-6">
             <div className="space-y-3">
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#036c3e] tracking-tight leading-tight">
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#042f1b] tracking-tight leading-tight">
                 A founder-led firm with a selective lens
               </h2>
             </div>
 
-            <div className="space-y-4 text-base text-slate-600 leading-relaxed">
+            <div className="space-y-4 text-base text-slate-700 leading-relaxed">
               <p>
                 Akufai Capital & Equities reflects the investment perspective and long-term orientation of{' '}
                 <strong className="text-[#036c3e] font-semibold">{about.founder.name}</strong>, {about.founder.role}. The firm&apos;s approach is grounded in disciplined judgment, cross-border perspective, and an interest in ventures that combine commercial promise with real-world relevance.
@@ -57,9 +57,9 @@ export default function FounderSection({ about }: FounderSectionProps) {
                 'Pan-African & cross-border linkages',
                 'Durable economic fundamentals',
               ].map((pillar, i) => (
-                <div key={i} className="flex items-center gap-2.5 text-sm text-slate-700">
-                  <div className="w-5 h-5 rounded-full bg-[#fcf8e8] text-[#b6960b] flex items-center justify-center shrink-0 border border-[#e6d58f]">
-                    <Check className="w-3.5 h-3.5" />
+                <div key={i} className="flex items-center gap-2.5 text-sm font-medium text-[#042f1b] bg-white/85 px-3.5 py-2.5 rounded-xl border border-[#dec668] shadow-[0_2px_10px_rgba(182,150,11,0.1)]">
+                  <div className="w-5 h-5 rounded-full bg-gradient-to-br from-[#d4b429] to-[#b6960b] text-[#042f1b] flex items-center justify-center shrink-0 shadow-xs">
+                    <Check className="w-3.5 h-3.5 stroke-[2.5]" />
                   </div>
                   <span>{pillar}</span>
                 </div>
@@ -67,13 +67,13 @@ export default function FounderSection({ about }: FounderSectionProps) {
             </div>
 
             {/* Prominent Actionable CTA Button at the bottom */}
-            <div className="pt-4 border-t border-slate-100">
+            <div className="pt-4 border-t border-[#dec668]/50">
               <Link
                 href="/about"
-                className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 text-sm font-semibold text-white bg-[#036c3e] hover:bg-[#02522f] border border-[#b6960b]/30 rounded-lg shadow-sm transition-all duration-200 active:scale-[0.98] group"
+                className="gold-btn-luxury inline-flex items-center justify-center gap-2.5 px-6 py-3.5 text-sm font-bold rounded-lg active:scale-[0.98] group"
               >
                 <span>Read More About Our Approach and Leadership</span>
-                <ArrowRight className="w-4 h-4 text-[#d4b429] group-hover:text-white transition-all duration-200 group-hover:translate-x-1" />
+                <ArrowRight className="w-4 h-4 text-[#042f1b] transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
             </div>
           </div>

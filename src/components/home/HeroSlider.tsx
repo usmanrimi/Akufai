@@ -72,20 +72,24 @@ export default function HeroSlider({ slides }: HeroSliderProps) {
 
   return (
     <section
-      className="relative bg-white overflow-hidden py-12 lg:py-20 border-b border-slate-100 group"
+      className="relative bg-gradient-to-b from-[#fffdf8] via-white to-[#fdf9eb]/60 overflow-hidden py-12 lg:py-20 border-b border-[#dec668]/50 group"
       aria-roledescription="carousel"
       aria-label="Featured Firm Highlights"
       tabIndex={0}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Subtle Ambient Golden Glow Aura */}
+      <div className="absolute -top-24 -right-24 w-[480px] h-[480px] bg-radial from-[#d4b429]/22 via-[#b6960b]/8 to-transparent rounded-full blur-3xl pointer-events-none gold-ambient-glow" />
+      <div className="absolute -bottom-24 -left-24 w-[380px] h-[380px] bg-radial from-[#b6960b]/14 via-transparent to-transparent rounded-full blur-3xl pointer-events-none" />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column: Hero Text Content */}
           <div className="lg:col-span-6 space-y-6 lg:space-y-8 z-10">
             <div key={`text-${current.id}`} className="space-y-5 transition-all duration-500 ease-out">
               {/* Main Hero Headline */}
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#036c3e] tracking-tight leading-[1.1]">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#042f1b] tracking-tight leading-[1.1]">
                 {current.title}
               </h1>
 
@@ -98,15 +102,15 @@ export default function HeroSlider({ slides }: HeroSliderProps) {
               <div className="pt-2 flex flex-wrap items-center gap-4">
                 <Link
                   href={current.primaryCtaLink || '/about'}
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-semibold text-white bg-[#036c3e] hover:bg-[#02522f] border border-[#b6960b]/30 rounded-lg shadow-sm transition-all duration-200 active:scale-[0.98] group/btn"
+                  className="gold-btn-luxury inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-bold rounded-lg active:scale-[0.98] group/btn"
                 >
                   <span>{current.primaryCtaText || 'About Akufai'}</span>
-                  <ArrowUpRight className="w-4 h-4 text-[#d4b429] group-hover/btn:text-white transition-all duration-200 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
+                  <ArrowUpRight className="w-4 h-4 text-[#042f1b] transition-transform duration-300 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
                 </Link>
 
                 <Link
                   href={current.secondaryCtaLink || '/contact'}
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-bold text-[#042f1b] bg-[#b6960b] hover:bg-[#9e8109] hover:text-white border border-[#b6960b] rounded-lg shadow-xs transition-all duration-200 active:scale-[0.98]"
+                  className="green-gold-btn inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-semibold rounded-lg active:scale-[0.98]"
                 >
                   <span>{current.secondaryCtaText || 'Get in Touch'}</span>
                 </Link>
@@ -118,10 +122,10 @@ export default function HeroSlider({ slides }: HeroSliderProps) {
               <button
                 type="button"
                 onClick={() => setIsPlaying(!isPlaying)}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-slate-600 bg-slate-100 hover:bg-slate-200 focus:bg-[#f2f9f5] focus:text-[#036c3e] focus:ring-2 focus:ring-[#036c3e] rounded-full transition-all focus:outline-none opacity-0 focus:opacity-100 group-focus-within:opacity-100 hover:opacity-100"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-[#042f1b] bg-[#fcf6df] hover:bg-[#f5e7b8] border border-[#dec668] focus:ring-2 focus:ring-[#b6960b] rounded-full transition-all focus:outline-none opacity-0 focus:opacity-100 group-focus-within:opacity-100 hover:opacity-100"
                 aria-label={isPlaying ? 'Pause slideshow' : 'Resume slideshow'}
               >
-                {isPlaying ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5" />}
+                {isPlaying ? <Pause className="w-3.5 h-3.5 text-[#b6960b]" /> : <Play className="w-3.5 h-3.5 text-[#b6960b]" />}
                 <span>{isPlaying ? 'Pause auto-rotation' : 'Play auto-rotation'}</span>
               </button>
             </div>
@@ -129,7 +133,7 @@ export default function HeroSlider({ slides }: HeroSliderProps) {
 
           {/* Right Column: Hero Photograph */}
           <div className="lg:col-span-6 relative">
-            <div className="relative aspect-[4/3] sm:aspect-[16/11] rounded-2xl overflow-hidden shadow-xl border-2 border-[#b6960b]/40 bg-slate-100">
+            <div className="relative aspect-[4/3] sm:aspect-[16/11] rounded-2xl overflow-hidden border-2 border-[#b6960b] ring-4 ring-[#b6960b]/15 shadow-[0_20px_50px_-12px_rgba(182,150,11,0.32)] bg-slate-100 transition-shadow duration-500 hover:shadow-[0_24px_60px_-10px_rgba(182,150,11,0.45)]">
               <div key={`img-${current.id}`} className="relative w-full h-full transition-opacity duration-500 ease-in-out">
                 <Image
                   src={current.imageUrl || '/images/hero_patient_capital.png'}

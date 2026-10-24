@@ -143,13 +143,13 @@ export default function AudioPlayer({ audioUrl, title, episodeNumber }: AudioPla
 
           <button
             onClick={togglePlay}
-            className="w-14 h-14 rounded-full bg-[#036c3e] hover:bg-[#02522f] ring-2 ring-[#b6960b]/70 text-white flex items-center justify-center shadow-lg transition-transform active:scale-95 focus:outline-none focus:ring-2 focus:ring-[#d4b429]"
+            className="w-14 h-14 rounded-full bg-gradient-to-br from-[#d4b429] to-[#b6960b] ring-4 ring-[#d4b429]/30 text-[#042f1b] flex items-center justify-center shadow-[0_0_25px_rgba(212,180,41,0.5)] transition-transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-[#d4b429]"
             aria-label={isPlaying ? 'Pause audio' : 'Play audio'}
           >
             {isPlaying ? (
-              <Pause className="w-6 h-6 fill-white" />
+              <Pause className="w-6 h-6 fill-[#042f1b]" />
             ) : (
-              <Play className="w-6 h-6 fill-white translate-x-0.5" />
+              <Play className="w-6 h-6 fill-[#042f1b] translate-x-0.5" />
             )}
           </button>
 

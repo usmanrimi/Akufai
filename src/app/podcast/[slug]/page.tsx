@@ -48,9 +48,9 @@ export default async function PodcastEpisodeDetailPage({ params }: EpisodePagePr
         </div>
 
         {/* Episode Header */}
-        <div className="space-y-4 border-b border-slate-100 pb-8">
+        <div className="space-y-4 border-b border-[#dec668]/60 pb-8">
           <div className="flex flex-wrap items-center gap-3">
-            <span className="px-3 py-1 rounded-md bg-[#f2f9f5] text-[#036c3e] text-xs font-bold uppercase tracking-wider border border-[#b6960b]/40">
+            <span className="px-3 py-1 rounded-md bg-gradient-to-r from-[#fcf6df] to-[#f7ebc1] text-[#042f1b] text-xs font-bold uppercase tracking-wider border border-[#b6960b]/60">
               Episode {episode.episodeNumber} • {episode.category}
             </span>
             <div className="flex items-center gap-2 text-xs text-slate-500">
@@ -58,7 +58,7 @@ export default async function PodcastEpisodeDetailPage({ params }: EpisodePagePr
                 <Calendar className="w-3.5 h-3.5 text-[#b6960b]" />
                 {episode.publishDate}
               </span>
-              <span>•</span>
+              <span className="text-[#b6960b]">•</span>
               <span className="flex items-center gap-1">
                 <Clock className="w-3.5 h-3.5 text-[#b6960b]" />
                 {episode.duration}
@@ -66,7 +66,7 @@ export default async function PodcastEpisodeDetailPage({ params }: EpisodePagePr
             </div>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-[#036c3e] tracking-tight leading-tight">
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-[#042f1b] tracking-tight leading-tight">
             {episode.title}
           </h1>
 
@@ -76,7 +76,7 @@ export default async function PodcastEpisodeDetailPage({ params }: EpisodePagePr
         </div>
 
         {/* Interactive Playable Audio Player */}
-        <div className="bg-[#061c11] text-white rounded-2xl p-6 sm:p-8 border border-[#b6960b]/35 shadow-xl">
+        <div className="bg-[#061c11] text-white rounded-2xl p-6 sm:p-8 border-2 border-[#b6960b]/70 shadow-[0_18px_40px_-10px_rgba(182,150,11,0.3)]">
           <AudioPlayer
             audioUrl={episode.audioUrl || ''}
             title={episode.title}
@@ -85,16 +85,16 @@ export default async function PodcastEpisodeDetailPage({ params }: EpisodePagePr
         </div>
 
         {/* Host & Guest Information */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 p-6 rounded-xl bg-[#f2f9f5]/40 border border-[#e6d58f]">
+        <div className="gold-card-surface grid grid-cols-1 sm:grid-cols-2 gap-6 p-6 rounded-xl border border-[#dec668]">
           <div className="space-y-1">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#b6960b]">Host</span>
-            <p className="text-base font-bold text-[#036c3e]">{episode.hostName}</p>
+            <span className="text-xs font-bold uppercase tracking-wider text-[#8f7506]">Host</span>
+            <p className="text-base font-bold text-[#042f1b]">{episode.hostName}</p>
             <p className="text-xs text-slate-600">Founder & CEO, Akufai Capital & Equities</p>
           </div>
           {episode.guestName && (
             <div className="space-y-1">
-              <span className="text-xs font-bold uppercase tracking-wider text-[#b6960b]">Guest</span>
-              <p className="text-base font-bold text-[#036c3e]">{episode.guestName}</p>
+              <span className="text-xs font-bold uppercase tracking-wider text-[#8f7506]">Guest</span>
+              <p className="text-base font-bold text-[#042f1b]">{episode.guestName}</p>
               <p className="text-xs text-slate-600">{episode.guestRole || 'Featured Contributor'}</p>
             </div>
           )}
@@ -103,12 +103,12 @@ export default async function PodcastEpisodeDetailPage({ params }: EpisodePagePr
         {/* Key Takeaways */}
         {episode.keyTakeaways && episode.keyTakeaways.length > 0 && (
           <div className="space-y-4">
-            <h3 className="text-xl font-bold text-[#036c3e]">Key Discussion Takeaways</h3>
+            <h3 className="text-xl font-bold text-[#042f1b]">Key Discussion Takeaways</h3>
             <div className="space-y-2.5">
               {episode.keyTakeaways.map((takeaway, i) => (
                 <div key={i} className="flex items-start gap-3 text-sm text-slate-700 leading-relaxed">
-                  <div className="w-5 h-5 rounded-full bg-[#fcf8e8] text-[#b6960b] flex items-center justify-center shrink-0 mt-0.5 border border-[#e6d58f]">
-                    <Check className="w-3.5 h-3.5" />
+                  <div className="w-5 h-5 rounded-full bg-gradient-to-br from-[#d4b429] to-[#b6960b] text-[#042f1b] flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
+                    <Check className="w-3.5 h-3.5 stroke-[2.5]" />
                   </div>
                   <span>{takeaway}</span>
                 </div>

@@ -82,10 +82,10 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="bg-white">
-      {/* 1. Approved High-Contrast Green Brand Hero */}
-      <section className="py-20 lg:py-28 bg-[#061c11] text-white relative overflow-hidden border-b-2 border-[#b6960b]/40">
-        <div className="absolute inset-0 bg-radial from-[#036c3e]/35 via-transparent to-transparent pointer-events-none" />
+    <div className="gold-surface-wash">
+      {/* 1. Approved High-Contrast Green Brand Hero with Ambient Golden Glow */}
+      <section className="py-20 lg:py-28 bg-[#061c11] text-white relative overflow-hidden border-b-2 border-[#b6960b]">
+        <div className="absolute inset-0 bg-radial from-[#b6960b]/28 via-[#036c3e]/20 to-transparent pointer-events-none gold-ambient-glow" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 relative z-10">
           <h1
             style={{ color: '#ffffff' }}
@@ -94,21 +94,21 @@ export default function ContactPage() {
             For Aligned Inquiries
           </h1>
           <p
-            style={{ color: '#e6f4ed' }}
-            className="text-lg sm:text-xl !text-emerald-50/95 leading-relaxed max-w-2xl mx-auto font-medium"
+            style={{ color: '#f8efcf' }}
+            className="text-lg sm:text-xl !text-[#f8efcf] leading-relaxed max-w-2xl mx-auto font-medium"
           >
             Akufai welcomes a limited number of aligned inquiries, strategic introductions, and partnership conversations.
           </p>
         </div>
       </section>
 
-      {/* 2. Main Contact Grid with Rich Green Panel & Form */}
+      {/* 2. Main Contact Grid with Rich Green/Gold Panel & Luxury Form */}
       <section className="py-16 lg:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-stretch">
-          {/* Left Column: Clearly Structured Green Information Panel */}
-          <div className="lg:col-span-5 bg-[#061c11] text-white rounded-3xl p-8 sm:p-10 lg:p-11 border border-[#b6960b]/35 shadow-xl relative overflow-hidden flex flex-col justify-between space-y-8">
-            {/* Subtle Gradient Glow */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-[#036c3e]/20 rounded-full blur-3xl pointer-events-none" />
+          {/* Left Column: Clearly Structured Green Information Panel with Golden Glow */}
+          <div className="lg:col-span-5 bg-[#061c11] text-white rounded-3xl p-8 sm:p-10 lg:p-11 border-2 border-[#b6960b]/70 shadow-[0_18px_42px_-10px_rgba(182,150,11,0.3)] relative overflow-hidden flex flex-col justify-between space-y-8">
+            {/* Subtle Golden Gradient Glow */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#b6960b]/22 rounded-full blur-3xl pointer-events-none gold-ambient-glow" />
 
             <div className="space-y-6 relative z-10">
               <div className="space-y-2">
@@ -122,7 +122,7 @@ export default function ContactPage() {
 
               {/* Well-Spaced Guideline Items with Restrained Gold Accents */}
               <div className="space-y-5 pt-2">
-                <div className="space-y-1.5 p-4 rounded-2xl bg-[#0b2919]/70 border border-[#b6960b]/30">
+                <div className="space-y-1.5 p-4 rounded-2xl bg-[#0b2919]/80 border border-[#b6960b]/50">
                   <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#d4b429]">
                     <Check className="w-4 h-4 text-[#d4b429]" />
                     <span>Selective Alignment</span>
@@ -132,7 +132,7 @@ export default function ContactPage() {
                   </p>
                 </div>
 
-                <div className="space-y-1.5 p-4 rounded-2xl bg-[#0b2919]/70 border border-[#b6960b]/30">
+                <div className="space-y-1.5 p-4 rounded-2xl bg-[#0b2919]/80 border border-[#b6960b]/50">
                   <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#d4b429]">
                     <ShieldCheck className="w-4 h-4 text-[#d4b429]" />
                     <span>Strict Confidentiality</span>
@@ -145,10 +145,10 @@ export default function ContactPage() {
             </div>
 
             {/* Direct Channels Footer inside Panel */}
-            <div className="space-y-4 pt-6 border-t border-[#123823] relative z-10">
+            <div className="space-y-4 pt-6 border-t border-[#b6960b]/35 relative z-10">
               <div className="flex items-start gap-3.5 text-sm text-slate-300">
-                <div className="w-9 h-9 rounded-xl bg-[#0b2919] text-[#d4b429] flex items-center justify-center shrink-0 border border-[#b6960b]/40">
-                  <Mail className="w-4 h-4 text-[#d4b429]" />
+                <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#d4b429] to-[#b6960b] text-[#042f1b] flex items-center justify-center shrink-0 border border-[#fff3b8] shadow-xs">
+                  <Mail className="w-4 h-4 text-[#042f1b]" />
                 </div>
                 <div>
                   <span className="block text-[11px] font-bold text-[#d4b429] uppercase tracking-wider">
@@ -164,8 +164,8 @@ export default function ContactPage() {
               </div>
 
               <div className="flex items-start gap-3.5 text-sm text-slate-300">
-                <div className="w-9 h-9 rounded-xl bg-[#0b2919] text-[#d4b429] flex items-center justify-center shrink-0 border border-[#b6960b]/40">
-                  <MapPin className="w-4 h-4 text-[#d4b429]" />
+                <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#d4b429] to-[#b6960b] text-[#042f1b] flex items-center justify-center shrink-0 border border-[#fff3b8] shadow-xs">
+                  <MapPin className="w-4 h-4 text-[#042f1b]" />
                 </div>
                 <div>
                   <span className="block text-[11px] font-bold text-[#d4b429] uppercase tracking-wider">
@@ -180,7 +180,8 @@ export default function ContactPage() {
           </div>
 
           {/* Right Column: Contact Submission Form */}
-          <div className="lg:col-span-7 bg-white p-8 sm:p-10 lg:p-11 rounded-3xl border border-slate-200/90 shadow-sm flex flex-col justify-between">
+          <div className="lg:col-span-7 gold-card-surface p-8 sm:p-10 lg:p-11 rounded-3xl border border-[#dec668] shadow-[0_14px_34px_-8px_rgba(182,150,11,0.18)] flex flex-col justify-between relative overflow-hidden">
+            <div className="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-[#8f7506] via-[#e5c846] to-[#036c3e]" />
             <form onSubmit={handleSubmit} className="space-y-5">
               {/* Honeypot Spam Trap */}
               <div className="hidden" aria-hidden="true">
@@ -320,7 +321,7 @@ export default function ContactPage() {
               <button
                 type="submit"
                 disabled={status === 'loading'}
-                className="w-full py-3.5 px-6 rounded-xl text-sm font-semibold text-white bg-[#036c3e] hover:bg-[#02522f] border border-[#b6960b]/40 disabled:bg-slate-400 shadow-sm transition-all duration-200 flex items-center justify-center gap-2 active:scale-[0.99] cursor-pointer"
+                className="gold-btn-luxury w-full py-3.5 px-6 rounded-xl text-sm font-bold disabled:bg-slate-400 flex items-center justify-center gap-2 active:scale-[0.99] cursor-pointer"
               >
                 {status === 'loading' ? (
                   <>
@@ -330,7 +331,7 @@ export default function ContactPage() {
                 ) : (
                   <>
                     <span>SUBMIT ALIGNED INQUIRY</span>
-                    <ArrowRight className="w-4 h-4 text-[#d4b429]" />
+                    <ArrowRight className="w-4 h-4 text-[#042f1b]" />
                   </>
                 )}
               </button>
