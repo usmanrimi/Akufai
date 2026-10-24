@@ -10,11 +10,11 @@ interface BlogPreviewProps {
 
 export default function BlogPreview({ posts }: BlogPreviewProps) {
   return (
-    <section className="py-16 lg:py-24 bg-[#f8faf8] border-b border-slate-200/70">
+    <section className="py-16 lg:py-24 bg-white border-b border-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         {/* Section Header without small decorative label */}
         <div className="max-w-3xl mx-auto text-center space-y-3">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#036c3e] tracking-tight">
             From the desk of Akufai
           </h2>
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
@@ -27,7 +27,7 @@ export default function BlogPreview({ posts }: BlogPreviewProps) {
           {posts.slice(0, 3).map((post) => (
             <article
               key={post.id}
-              className="group bg-white rounded-xl border border-slate-200/90 overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between hover:border-[#008751]/50"
+              className="group bg-white rounded-xl border border-slate-200/90 overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between hover:border-[#b6960b]"
             >
               {/* Cover Image */}
               <div className="relative aspect-[16/10] bg-slate-100 overflow-hidden">
@@ -37,7 +37,7 @@ export default function BlogPreview({ posts }: BlogPreviewProps) {
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-xs px-2.5 py-1 rounded-md text-xs font-bold text-[#008751] shadow-xs">
+                <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-xs px-2.5 py-1 rounded-md text-xs font-bold text-[#036c3e] border border-[#b6960b]/30 shadow-xs">
                   {post.category}
                 </div>
               </div>
@@ -47,17 +47,17 @@ export default function BlogPreview({ posts }: BlogPreviewProps) {
                 <div className="space-y-3">
                   <div className="flex items-center gap-3 text-xs text-slate-500">
                     <span className="flex items-center gap-1">
-                      <Calendar className="w-3.5 h-3.5" />
+                      <Calendar className="w-3.5 h-3.5 text-[#b6960b]" />
                       {post.publishDate}
                     </span>
                     <span>•</span>
                     <span className="flex items-center gap-1">
-                      <Clock className="w-3.5 h-3.5" />
+                      <Clock className="w-3.5 h-3.5 text-[#b6960b]" />
                       {post.readTime || '5 min read'}
                     </span>
                   </div>
 
-                  <h3 className="text-lg font-bold text-slate-900 leading-snug group-hover:text-[#008751] transition-colors">
+                  <h3 className="text-lg font-bold text-slate-900 leading-snug group-hover:text-[#036c3e] transition-colors">
                     <Link href={`/blog/${post.slug}`} className="focus:outline-none">
                       {post.title}
                     </Link>
@@ -71,10 +71,10 @@ export default function BlogPreview({ posts }: BlogPreviewProps) {
                 <div className="pt-3 border-t border-slate-100">
                   <Link
                     href={`/blog/${post.slug}`}
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#008751] hover:text-[#056839] group/link"
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#036c3e] hover:text-[#b6960b] group/link transition-colors"
                   >
                     <span>Read Article</span>
-                    <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
+                    <ArrowUpRight className="w-3.5 h-3.5 text-[#b6960b] transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
                   </Link>
                 </div>
               </div>
@@ -86,7 +86,7 @@ export default function BlogPreview({ posts }: BlogPreviewProps) {
         <div className="text-center pt-4">
           <Link
             href="/blog"
-            className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-semibold text-slate-900 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-lg transition-all duration-200 active:scale-[0.98] group"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-bold text-[#042f1b] bg-[#b6960b] hover:bg-[#9e8109] hover:text-white border border-[#b6960b] rounded-lg transition-all duration-200 active:scale-[0.98] group"
           >
             <span>View All Posts</span>
             <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />

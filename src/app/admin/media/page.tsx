@@ -82,7 +82,7 @@ export default function AdminMediaPage() {
           </p>
         </div>
 
-        <label className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold text-white bg-[#008751] hover:bg-[#056839] rounded-lg shadow-xs cursor-pointer transition-colors">
+        <label className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold text-white bg-[#036c3e] hover:bg-[#02522f] rounded-lg shadow-xs cursor-pointer transition-colors">
           {uploading ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <Upload className="w-3.5 h-3.5" />}
           <span>{uploading ? 'Uploading Asset...' : 'Upload Asset'}</span>
           <input
@@ -100,7 +100,7 @@ export default function AdminMediaPage() {
         {media.map((file) => (
           <div
             key={file.id}
-            className="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-xs hover:border-[#008751]/40 transition-all flex flex-col justify-between group"
+            className="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-xs hover:border-[#036c3e]/40 transition-all flex flex-col justify-between group"
           >
             <div className="relative aspect-square bg-slate-100 overflow-hidden">
               {file.mimeType.startsWith('image') ? (
@@ -121,11 +121,11 @@ export default function AdminMediaPage() {
                 <div className="flex items-center gap-1">
                   <button
                     onClick={() => copyToClipboard(file.url, file.id)}
-                    className="p-1 hover:text-[#008751] rounded"
+                    className="p-1 hover:text-[#036c3e] rounded"
                     title="Copy URL"
                   >
                     {copiedId === file.id ? (
-                      <Check className="w-3.5 h-3.5 text-[#008751]" />
+                      <Check className="w-3.5 h-3.5 text-[#036c3e]" />
                     ) : (
                       <Copy className="w-3.5 h-3.5" />
                     )}

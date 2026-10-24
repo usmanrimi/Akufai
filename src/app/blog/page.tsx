@@ -22,8 +22,8 @@ export default async function BlogPage() {
   return (
     <div className="bg-white">
       {/* 1. Approved High-Contrast Green Brand Hero */}
-      <section className="py-20 lg:py-28 bg-[#071910] text-white relative overflow-hidden border-b border-[#0d2a1b]">
-        <div className="absolute inset-0 bg-radial from-[#008751]/25 via-transparent to-transparent pointer-events-none" />
+      <section className="py-20 lg:py-28 bg-[#061c11] text-white relative overflow-hidden border-b-2 border-[#b6960b]/40">
+        <div className="absolute inset-0 bg-radial from-[#036c3e]/35 via-transparent to-transparent pointer-events-none" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 relative z-10">
           <h1
             style={{ color: '#ffffff' }}
@@ -32,8 +32,8 @@ export default async function BlogPage() {
             From the desk of Akufai
           </h1>
           <p
-            style={{ color: '#d1fae5' }}
-            className="text-lg sm:text-xl !text-emerald-100/95 leading-relaxed max-w-2xl mx-auto font-medium"
+            style={{ color: '#e6f4ed' }}
+            className="text-lg sm:text-xl !text-emerald-50/95 leading-relaxed max-w-2xl mx-auto font-medium"
           >
             Occasional reflections on investing, enterprise, market perspective, and the kinds of questions that shape long-term conviction.
           </p>
@@ -48,7 +48,7 @@ export default async function BlogPage() {
             return (
               <article
                 key={post.id}
-                className="bg-white rounded-2xl border border-slate-200/90 overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between group hover:border-[#008751]/40"
+                className="bg-white rounded-2xl border border-slate-200/90 overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between group hover:border-[#b6960b]"
               >
                 {/* Cover Image */}
                 <div className="relative aspect-[16/10] bg-slate-100 overflow-hidden">
@@ -58,7 +58,7 @@ export default async function BlogPage() {
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-xs px-2.5 py-1 rounded-md text-xs font-bold text-[#008751]">
+                  <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-xs px-2.5 py-1 rounded-md text-xs font-bold text-[#036c3e] border border-[#b6960b]/30">
                     {post.category}
                   </div>
                 </div>
@@ -68,17 +68,17 @@ export default async function BlogPage() {
                   <div className="space-y-3">
                     <div className="flex items-center gap-3 text-xs text-slate-500">
                       <span className="flex items-center gap-1">
-                        <Calendar className="w-3.5 h-3.5" />
+                        <Calendar className="w-3.5 h-3.5 text-[#b6960b]" />
                         {post.publishDate}
                       </span>
                       <span>•</span>
                       <span className="flex items-center gap-1">
-                        <Clock className="w-3.5 h-3.5" />
+                        <Clock className="w-3.5 h-3.5 text-[#b6960b]" />
                         {post.readTime || '5 min read'}
                       </span>
                     </div>
 
-                    <h2 className="text-xl font-bold text-slate-900 leading-snug group-hover:text-[#008751] transition-colors">
+                    <h2 className="text-xl font-bold text-slate-900 leading-snug group-hover:text-[#036c3e] transition-colors">
                       <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                     </h2>
 
@@ -91,9 +91,9 @@ export default async function BlogPage() {
                     {author ? (
                       <Link
                         href={`/authors/${author.slug}`}
-                        className="flex items-center gap-2 text-xs text-slate-600 hover:text-[#008751]"
+                        className="flex items-center gap-2 text-xs text-slate-600 hover:text-[#036c3e]"
                       >
-                        <div className="w-6 h-6 rounded-full bg-[#f0fdf4] text-[#008751] border border-[#dcfce7] flex items-center justify-center font-bold text-[10px]">
+                        <div className="w-6 h-6 rounded-full bg-[#f2f9f5] text-[#036c3e] border border-[#b6960b]/40 flex items-center justify-center font-bold text-[10px]">
                           {author.name.split(' ').map((n) => n[0]).join('')}
                         </div>
                         <span className="font-semibold">{author.name}</span>
@@ -104,10 +104,10 @@ export default async function BlogPage() {
 
                     <Link
                       href={`/blog/${post.slug}`}
-                      className="inline-flex items-center gap-1 text-xs font-semibold text-[#008751] hover:text-[#056839]"
+                      className="inline-flex items-center gap-1 text-xs font-semibold text-[#036c3e] hover:text-[#b6960b] transition-colors"
                     >
                       <span>Read Article</span>
-                      <ArrowUpRight className="w-3.5 h-3.5" />
+                      <ArrowUpRight className="w-3.5 h-3.5 text-[#b6960b]" />
                     </Link>
                   </div>
                 </div>

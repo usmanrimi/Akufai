@@ -112,7 +112,7 @@ export default function AdminInquiriesPage() {
             onClick={() => setFilter(tab)}
             className={`px-3 py-1.5 rounded-lg font-semibold uppercase tracking-wider transition-colors ${
               filter === tab
-                ? 'bg-[#008751] text-white shadow-xs'
+                ? 'bg-[#036c3e] text-white shadow-xs'
                 : 'text-slate-600 hover:bg-slate-100'
             }`}
           >
@@ -135,7 +135,7 @@ export default function AdminInquiriesPage() {
                 onClick={() => handleSelect(inq)}
                 className={`p-4 rounded-xl border cursor-pointer transition-all shadow-xs ${
                   selectedInquiry?.id === inq.id
-                    ? 'bg-emerald-50/50 border-[#008751] ring-1 ring-[#008751]'
+                    ? 'bg-emerald-50/50 border-[#036c3e] ring-1 ring-[#036c3e]'
                     : inq.status === 'unread'
                     ? 'bg-white border-amber-300 hover:border-slate-300'
                     : 'bg-white border-slate-200 hover:border-slate-300'
@@ -174,7 +174,7 @@ export default function AdminInquiriesPage() {
           <div className="lg:col-span-6 bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-6">
             <div className="flex items-center justify-between border-b border-slate-100 pb-3">
               <div className="space-y-0.5">
-                <span className="text-[10px] font-mono font-bold text-[#008751] uppercase">
+                <span className="text-[10px] font-mono font-bold text-[#036c3e] uppercase">
                   INQUIRY #{selectedInquiry.id}
                 </span>
                 <h3 className="text-base font-bold text-slate-900">{selectedInquiry.subject}</h3>
@@ -197,7 +197,7 @@ export default function AdminInquiriesPage() {
                 <span className="text-slate-400 uppercase font-bold block text-[10px]">Email Address</span>
                 <a
                   href={`mailto:${selectedInquiry.email}`}
-                  className="text-[#008751] font-semibold hover:underline"
+                  className="text-[#036c3e] font-semibold hover:underline"
                 >
                   {selectedInquiry.email}
                 </a>
@@ -244,7 +244,7 @@ export default function AdminInquiriesPage() {
                 <div className="flex items-center gap-2">
                   <button
                     onClick={() => updateStatus(selectedInquiry.id, 'replied', notes)}
-                    className="px-3 py-1.5 text-xs font-bold text-white bg-[#008751] hover:bg-[#056839] rounded-lg shadow-xs"
+                    className="px-3 py-1.5 text-xs font-bold text-white bg-[#036c3e] hover:bg-[#02522f] rounded-lg shadow-xs"
                   >
                     Mark Replied
                   </button>

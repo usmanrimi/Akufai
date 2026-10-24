@@ -125,7 +125,7 @@ function LoginForm() {
               }}
               className={`flex-1 pb-3 text-center border-b-2 transition-colors ${
                 tab === 'login'
-                  ? 'border-[#008751] text-[#008751] font-bold'
+                  ? 'border-[#036c3e] text-[#036c3e] font-bold'
                   : 'border-transparent text-slate-400 hover:text-slate-600'
               }`}
             >
@@ -138,7 +138,7 @@ function LoginForm() {
               }}
               className={`flex-1 pb-3 text-center border-b-2 transition-colors ${
                 tab === 'reset'
-                  ? 'border-[#008751] text-[#008751] font-bold'
+                  ? 'border-[#036c3e] text-[#036c3e] font-bold'
                   : 'border-transparent text-slate-400 hover:text-slate-600'
               }`}
             >
@@ -154,7 +154,7 @@ function LoginForm() {
           )}
 
           {success && (
-            <div className="p-3.5 rounded-lg bg-[#f0fdf4] border border-[#dcfce7] flex items-start gap-2.5 text-xs text-[#008751]">
+            <div className="p-3.5 rounded-lg bg-[#f0fdf4] border border-[#dcfce7] flex items-start gap-2.5 text-xs text-[#036c3e]">
               <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" />
               <span>{success}</span>
             </div>
@@ -176,7 +176,7 @@ function LoginForm() {
                     onChange={(e) => setEmail(e.target.value)}
                     required
                     placeholder="admin@akufaicapitalandequities.com"
-                    className="w-full pl-9 pr-4 py-2.5 text-sm bg-white border border-slate-300 rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#008751]"
+                    className="w-full pl-9 pr-4 py-2.5 text-sm bg-white border border-slate-300 rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#036c3e]"
                   />
                 </div>
               </div>
@@ -195,7 +195,7 @@ function LoginForm() {
                     onChange={(e) => setPassword(e.target.value)}
                     required
                     placeholder="••••••••••••"
-                    className="w-full pl-9 pr-4 py-2.5 text-sm bg-white border border-slate-300 rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#008751]"
+                    className="w-full pl-9 pr-4 py-2.5 text-sm bg-white border border-slate-300 rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#036c3e]"
                   />
                 </div>
               </div>
@@ -204,7 +204,7 @@ function LoginForm() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full py-3 px-4 text-xs font-bold uppercase tracking-wider text-white bg-[#008751] hover:bg-[#056839] disabled:bg-slate-400 rounded-lg shadow-sm transition-all flex items-center justify-center gap-2 active:scale-[0.98]"
+                  className="w-full py-3 px-4 text-xs font-bold uppercase tracking-wider text-white bg-[#036c3e] hover:bg-[#02522f] disabled:bg-slate-400 rounded-lg shadow-sm transition-all flex items-center justify-center gap-2 active:scale-[0.98]"
                 >
                   {loading ? (
                     <>
@@ -231,7 +231,7 @@ function LoginForm() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-300 rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#008751]"
+                  className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-300 rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#036c3e]"
                 />
               </div>
 
@@ -245,7 +245,7 @@ function LoginForm() {
                   onChange={(e) => setPassword(e.target.value)}
                   required
                   placeholder="Current password"
-                  className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-300 rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#008751]"
+                  className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-300 rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#036c3e]"
                 />
               </div>
 
@@ -259,7 +259,7 @@ function LoginForm() {
                   onChange={(e) => setNewPassword(e.target.value)}
                   required
                   placeholder="Min. 8 characters"
-                  className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-300 rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#008751]"
+                  className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-300 rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#036c3e]"
                 />
               </div>
 
@@ -273,7 +273,7 @@ function LoginForm() {
                   onChange={(e) => setConfirmPassword(e.target.value)}
                   required
                   placeholder="Confirm new password"
-                  className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-300 rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#008751]"
+                  className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-300 rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#036c3e]"
                 />
               </div>
 
@@ -281,7 +281,7 @@ function LoginForm() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full py-3 px-4 text-xs font-bold uppercase tracking-wider text-white bg-[#008751] hover:bg-[#056839] disabled:bg-slate-400 rounded-lg shadow-sm transition-all flex items-center justify-center gap-2 active:scale-[0.98]"
+                  className="w-full py-3 px-4 text-xs font-bold uppercase tracking-wider text-white bg-[#036c3e] hover:bg-[#02522f] disabled:bg-slate-400 rounded-lg shadow-sm transition-all flex items-center justify-center gap-2 active:scale-[0.98]"
                 >
                   {loading ? (
                     <>
@@ -301,7 +301,7 @@ function LoginForm() {
 
           {/* Quick Credential Hint Box for Development / Testing */}
           <div className="pt-4 border-t border-slate-100 bg-slate-50 -mx-6 -mb-8 p-4 rounded-b-2xl border-t text-center space-y-1">
-            <div className="flex items-center justify-center gap-1.5 text-xs font-bold text-[#008751]">
+            <div className="flex items-center justify-center gap-1.5 text-xs font-bold text-[#036c3e]">
               <ShieldCheck className="w-3.5 h-3.5" />
               <span>Default Initial Administrator Credentials</span>
             </div>

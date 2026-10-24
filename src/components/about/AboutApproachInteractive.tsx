@@ -24,8 +24,8 @@ export default function AboutApproachInteractive({ values }: AboutApproachIntera
             onClick={() => setActiveIdx(isActive ? null : idx)}
             className={`p-6 rounded-xl border transition-all duration-300 cursor-pointer ${
               isActive
-                ? 'bg-[#f0fdf4] border-[#008751] shadow-sm'
-                : 'bg-white border-slate-200 hover:border-slate-300 hover:bg-slate-50/70'
+                ? 'bg-[#f2f9f5] border-[#036c3e] shadow-sm'
+                : 'bg-white border-slate-200 hover:border-[#b6960b] hover:bg-slate-50/70'
             }`}
             role="button"
             tabIndex={0}
@@ -40,14 +40,14 @@ export default function AboutApproachInteractive({ values }: AboutApproachIntera
               <div className="flex items-center gap-4">
                 <span
                   className={`text-sm font-mono font-bold transition-colors duration-200 ${
-                    isActive ? 'text-[#008751]' : 'text-slate-400'
+                    isActive ? 'text-[#b6960b]' : 'text-slate-400'
                   }`}
                 >
                   {numStr} —
                 </span>
                 <h3
                   className={`text-base sm:text-lg font-bold transition-colors duration-200 ${
-                    isActive ? 'text-[#008751]' : 'text-slate-900'
+                    isActive ? 'text-[#036c3e]' : 'text-slate-900'
                   }`}
                 >
                   {val.title}
@@ -55,7 +55,7 @@ export default function AboutApproachInteractive({ values }: AboutApproachIntera
               </div>
               <ChevronRight
                 className={`w-4 h-4 transition-transform duration-300 ${
-                  isActive ? 'text-[#008751] rotate-90' : 'text-slate-400'
+                  isActive ? 'text-[#036c3e] rotate-90' : 'text-slate-400'
                 }`}
               />
             </div>
@@ -67,7 +67,7 @@ export default function AboutApproachInteractive({ values }: AboutApproachIntera
               }`}
             >
               <div className="overflow-hidden">
-                <p className="text-sm text-slate-700 leading-relaxed pl-8 border-l-2 border-[#008751]/50">
+                <p className="text-sm text-slate-700 leading-relaxed pl-8 border-l-2 border-[#b6960b]">
                   {val.description}
                 </p>
               </div>

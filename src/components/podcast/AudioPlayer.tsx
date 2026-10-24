@@ -90,14 +90,14 @@ export default function AudioPlayer({ audioUrl, title, episodeNumber }: AudioPla
       )}
 
       {/* Track Info */}
-      <div className="flex items-center justify-between border-b border-slate-800 pb-4">
+      <div className="flex items-center justify-between border-b border-[#123823] pb-4">
         <div>
-          <span className="text-xs font-mono text-emerald-400">EPISODE {episodeNumber}</span>
+          <span className="text-xs font-mono text-[#d4b429]">EPISODE {episodeNumber}</span>
           <h3 className="text-lg font-bold text-white leading-tight">{title}</h3>
         </div>
         <button
           onClick={cycleSpeed}
-          className="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-xs font-mono font-bold text-emerald-400 transition-colors"
+          className="px-2.5 py-1 rounded bg-[#0b2919] hover:bg-[#123823] border border-[#b6960b]/30 text-xs font-mono font-bold text-[#d4b429] transition-colors"
           title="Playback speed"
         >
           {playbackRate}x
@@ -112,7 +112,7 @@ export default function AudioPlayer({ audioUrl, title, episodeNumber }: AudioPla
           max={duration || 100}
           value={currentTime}
           onChange={handleSliderChange}
-          className="w-full h-1.5 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-[#008751]"
+          className="w-full h-1.5 bg-[#0b2919] rounded-lg appearance-none cursor-pointer accent-[#b6960b]"
           aria-label="Audio scrubber"
         />
         <div className="flex justify-between text-xs font-mono text-slate-400">
@@ -125,7 +125,7 @@ export default function AudioPlayer({ audioUrl, title, episodeNumber }: AudioPla
       <div className="flex items-center justify-between pt-2">
         <button
           onClick={toggleMute}
-          className="p-2 text-slate-400 hover:text-white rounded-lg transition-colors focus:outline-none"
+          className="p-2 text-slate-400 hover:text-[#d4b429] rounded-lg transition-colors focus:outline-none"
           aria-label={isMuted ? 'Unmute' : 'Mute'}
         >
           {isMuted ? <VolumeX className="w-5 h-5 text-rose-400" /> : <Volume2 className="w-5 h-5" />}
@@ -134,7 +134,7 @@ export default function AudioPlayer({ audioUrl, title, episodeNumber }: AudioPla
         <div className="flex items-center gap-4">
           <button
             onClick={() => seek(-15)}
-            className="p-2 text-slate-400 hover:text-white rounded-lg transition-colors"
+            className="p-2 text-slate-400 hover:text-[#d4b429] rounded-lg transition-colors"
             title="Rewind 15s"
             aria-label="Rewind 15 seconds"
           >
@@ -143,7 +143,7 @@ export default function AudioPlayer({ audioUrl, title, episodeNumber }: AudioPla
 
           <button
             onClick={togglePlay}
-            className="w-14 h-14 rounded-full bg-[#008751] hover:bg-[#056839] text-white flex items-center justify-center shadow-lg transition-transform active:scale-95 focus:outline-none focus:ring-2 focus:ring-emerald-400"
+            className="w-14 h-14 rounded-full bg-[#036c3e] hover:bg-[#02522f] ring-2 ring-[#b6960b]/70 text-white flex items-center justify-center shadow-lg transition-transform active:scale-95 focus:outline-none focus:ring-2 focus:ring-[#d4b429]"
             aria-label={isPlaying ? 'Pause audio' : 'Play audio'}
           >
             {isPlaying ? (
@@ -155,7 +155,7 @@ export default function AudioPlayer({ audioUrl, title, episodeNumber }: AudioPla
 
           <button
             onClick={() => seek(15)}
-            className="p-2 text-slate-400 hover:text-white rounded-lg transition-colors"
+            className="p-2 text-slate-400 hover:text-[#d4b429] rounded-lg transition-colors"
             title="Forward 15s"
             aria-label="Forward 15 seconds"
           >

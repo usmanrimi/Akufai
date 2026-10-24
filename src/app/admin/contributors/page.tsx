@@ -93,7 +93,7 @@ export default function AdminContributorsPage() {
           <button
             onClick={handleSave}
             disabled={saving}
-            className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold text-white bg-[#008751] hover:bg-[#056839] disabled:bg-slate-400 rounded-lg shadow-xs transition-colors"
+            className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold text-white bg-[#036c3e] hover:bg-[#02522f] disabled:bg-slate-400 rounded-lg shadow-xs transition-colors"
           >
             {saving ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <Save className="w-3.5 h-3.5" />}
             <span>Save & Publish</span>
@@ -102,7 +102,7 @@ export default function AdminContributorsPage() {
       </div>
 
       {message && (
-        <div className="p-3 bg-[#f0fdf4] border border-[#dcfce7] rounded-lg text-xs text-[#008751] flex items-center gap-2">
+        <div className="p-3 bg-[#f0fdf4] border border-[#dcfce7] rounded-lg text-xs text-[#036c3e] flex items-center gap-2">
           <CheckCircle2 className="w-4 h-4 shrink-0" />
           <span>{message}</span>
         </div>
@@ -115,7 +115,7 @@ export default function AdminContributorsPage() {
             className="bg-white p-5 rounded-xl border border-slate-200 shadow-xs space-y-4"
           >
             <div className="flex items-center justify-between border-b border-slate-100 pb-2">
-              <span className="text-xs font-bold font-mono text-[#008751]">{c.name}</span>
+              <span className="text-xs font-bold font-mono text-[#036c3e]">{c.name}</span>
               <button
                 onClick={() => handleDelete(idx)}
                 className="text-slate-400 hover:text-rose-600 p-1"

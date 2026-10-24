@@ -42,38 +42,38 @@ export default async function ContributorProfilePage({ params }: AuthorPageProps
         <div>
           <Link
             href="/about#contributors"
-            className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#008751] hover:text-[#056839]"
+            className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#036c3e] hover:text-[#02522f]"
           >
-            <ArrowLeft className="w-3.5 h-3.5" />
+            <ArrowLeft className="w-3.5 h-3.5 text-[#b6960b]" />
             <span>Back to Contributors</span>
           </Link>
         </div>
 
         {/* Profile Card */}
-        <div className="p-8 sm:p-10 rounded-2xl bg-slate-50 border border-slate-200/90 flex flex-col sm:flex-row items-center sm:items-start gap-8 relative overflow-hidden">
+        <div className="p-8 sm:p-10 rounded-2xl bg-[#f2f9f5]/40 border border-[#e6d58f] flex flex-col sm:flex-row items-center sm:items-start gap-8 relative overflow-hidden">
           {/* Subtle Top Gold Accent */}
-          <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-[#008751] via-[#b6950b] to-[#008751]" />
+          <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-[#036c3e] via-[#b6960b] to-[#036c3e]" />
 
-          <div className="w-20 h-20 rounded-2xl bg-[#f0fdf4] text-[#008751] border border-[#dcfce7] flex items-center justify-center font-bold text-2xl font-serif shrink-0 shadow-xs">
+          <div className="w-20 h-20 rounded-2xl bg-[#f2f9f5] text-[#036c3e] border border-[#b6960b]/40 flex items-center justify-center font-bold text-2xl font-serif shrink-0 shadow-xs">
             {author.name.split(' ').map((n) => n[0]).join('')}
           </div>
 
           <div className="space-y-4 text-center sm:text-left flex-1">
             <div>
-              <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900">{author.name}</h1>
-              <p className="text-sm font-medium text-slate-600 mt-0.5">{author.role}</p>
+              <h1 className="text-2xl sm:text-3xl font-extrabold text-[#036c3e]">{author.name}</h1>
+              <p className="text-sm font-semibold text-[#b6960b] mt-0.5">{author.role}</p>
             </div>
 
             <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
               {author.bio}
             </p>
 
-            <div className="pt-2 flex flex-wrap items-center justify-center sm:justify-start gap-4 text-xs font-medium text-slate-500">
-              <span className="bg-white px-3 py-1 rounded-md border border-slate-200">
-                {posts.length} Published Articles
+            <div className="pt-2 flex flex-wrap items-center justify-center sm:justify-start gap-4 text-xs font-medium text-slate-600">
+              <span className="bg-white px-3 py-1 rounded-md border border-[#e6d58f]">
+                <strong className="text-[#b6960b] font-bold">{posts.length}</strong> Published Articles
               </span>
-              <span className="bg-white px-3 py-1 rounded-md border border-slate-200">
-                {episodes.length} Podcast Appearances
+              <span className="bg-white px-3 py-1 rounded-md border border-[#e6d58f]">
+                <strong className="text-[#b6960b] font-bold">{episodes.length}</strong> Podcast Appearances
               </span>
             </div>
           </div>
@@ -81,7 +81,7 @@ export default async function ContributorProfilePage({ params }: AuthorPageProps
 
         {/* Authored Articles */}
         <div className="space-y-6">
-          <h2 className="text-2xl font-bold text-slate-900 border-b border-slate-100 pb-3">
+          <h2 className="text-2xl font-bold text-[#036c3e] border-b border-slate-100 pb-3">
             Articles & Reflections
           </h2>
 
@@ -90,25 +90,25 @@ export default async function ContributorProfilePage({ params }: AuthorPageProps
               {posts.map((post) => (
                 <div
                   key={post.id}
-                  className="p-6 rounded-xl border border-slate-200 bg-white hover:border-[#008751]/40 transition-all flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 group"
+                  className="p-6 rounded-xl border border-slate-200 bg-white hover:border-[#b6960b] transition-all flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 group"
                 >
                   <div className="space-y-1">
                     <div className="flex items-center gap-2 text-xs text-slate-500">
-                      <span className="text-[#008751] font-semibold uppercase">{post.category}</span>
+                      <span className="text-[#b6960b] font-semibold uppercase">{post.category}</span>
                       <span>•</span>
                       <span>{post.publishDate}</span>
                     </div>
-                    <h3 className="text-base font-bold text-slate-900 group-hover:text-[#008751] transition-colors">
+                    <h3 className="text-base font-bold text-slate-900 group-hover:text-[#036c3e] transition-colors">
                       <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                     </h3>
                   </div>
 
                   <Link
                     href={`/blog/${post.slug}`}
-                    className="shrink-0 inline-flex items-center gap-1 text-xs font-semibold text-[#008751] hover:text-[#056839]"
+                    className="shrink-0 inline-flex items-center gap-1 text-xs font-semibold text-[#036c3e] hover:text-[#b6960b] transition-colors"
                   >
                     <span>Read</span>
-                    <ArrowUpRight className="w-3.5 h-3.5" />
+                    <ArrowUpRight className="w-3.5 h-3.5 text-[#b6960b]" />
                   </Link>
                 </div>
               ))}
@@ -121,7 +121,7 @@ export default async function ContributorProfilePage({ params }: AuthorPageProps
         {/* Podcast Appearances */}
         {episodes.length > 0 && (
           <div className="space-y-6 pt-6 border-t border-slate-100">
-            <h2 className="text-2xl font-bold text-slate-900 border-b border-slate-100 pb-3">
+            <h2 className="text-2xl font-bold text-[#036c3e] border-b border-slate-100 pb-3">
               Podcast Conversations
             </h2>
 
@@ -129,25 +129,25 @@ export default async function ContributorProfilePage({ params }: AuthorPageProps
               {episodes.map((ep) => (
                 <div
                   key={ep.id}
-                  className="p-6 rounded-xl border border-slate-200 bg-white hover:border-[#008751]/40 transition-all flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 group"
+                  className="p-6 rounded-xl border border-slate-200 bg-white hover:border-[#b6960b] transition-all flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 group"
                 >
                   <div className="space-y-1">
                     <div className="flex items-center gap-2 text-xs text-slate-500">
-                      <span className="text-[#008751] font-semibold uppercase">Episode {ep.episodeNumber}</span>
+                      <span className="text-[#b6960b] font-semibold uppercase">Episode {ep.episodeNumber}</span>
                       <span>•</span>
                       <span>{ep.duration}</span>
                     </div>
-                    <h3 className="text-base font-bold text-slate-900 group-hover:text-[#008751] transition-colors">
+                    <h3 className="text-base font-bold text-slate-900 group-hover:text-[#036c3e] transition-colors">
                       <Link href={`/podcast/${ep.slug}`}>{ep.title}</Link>
                     </h3>
                   </div>
 
                   <Link
                     href={`/podcast/${ep.slug}`}
-                    className="shrink-0 inline-flex items-center gap-1 text-xs font-semibold text-[#008751] hover:text-[#056839]"
+                    className="shrink-0 inline-flex items-center gap-1 text-xs font-semibold text-[#036c3e] hover:text-[#b6960b] transition-colors"
                   >
                     <span>Listen</span>
-                    <Headphones className="w-3.5 h-3.5" />
+                    <Headphones className="w-3.5 h-3.5 text-[#b6960b]" />
                   </Link>
                 </div>
               ))}

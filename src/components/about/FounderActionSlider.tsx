@@ -81,7 +81,7 @@ export default function FounderActionSlider() {
 
   return (
     <div
-      className="relative rounded-2xl overflow-hidden border border-slate-200/90 shadow-md bg-slate-900 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#008751]"
+      className="relative rounded-2xl overflow-hidden border border-[#b6960b]/30 shadow-md bg-[#061c11] group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#036c3e]"
       aria-roledescription="carousel"
       aria-label="Executive leadership action gallery"
       tabIndex={0}
@@ -113,7 +113,7 @@ export default function FounderActionSlider() {
         {/* Caption & Accessible Controls Overlay */}
         <div className="absolute bottom-0 inset-x-0 p-4 sm:p-5 z-20 flex items-end justify-between gap-4 text-white">
           <div className="space-y-1 max-w-[80%]">
-            <span className="text-[10px] font-mono uppercase tracking-widest text-emerald-400 font-bold">
+            <span className="text-[10px] font-mono uppercase tracking-widest text-[#d4b429] font-bold">
               Leadership in Action
             </span>
             <p className="text-xs sm:text-sm font-semibold text-white/95 line-clamp-1 drop-shadow-xs">
@@ -125,7 +125,7 @@ export default function FounderActionSlider() {
           <button
             type="button"
             onClick={() => setIsPlaying(!isPlaying)}
-            className="p-1.5 rounded-full bg-slate-900/80 text-slate-300 hover:text-emerald-400 hover:bg-slate-900 focus:text-emerald-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 backdrop-blur-md border border-white/10 transition-all opacity-0 focus:opacity-100 group-focus-within:opacity-100 hover:opacity-100"
+            className="p-1.5 rounded-full bg-[#061c11]/85 text-slate-300 hover:text-[#d4b429] hover:bg-[#061c11] focus:text-[#d4b429] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#b6960b] backdrop-blur-md border border-[#b6960b]/30 transition-all opacity-0 focus:opacity-100 group-focus-within:opacity-100 hover:opacity-100"
             aria-label={isPlaying ? 'Pause slideshow' : 'Resume slideshow'}
           >
             {isPlaying ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5" />}

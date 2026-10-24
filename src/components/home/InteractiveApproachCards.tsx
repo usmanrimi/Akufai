@@ -20,33 +20,33 @@ const APPROACH_CARDS: ApproachCardItem[] = [
     title: 'Thoughtful Evaluation',
     description:
       'Rigorous analysis and disciplined capital allocation prioritizing signal over market noise.',
-    bgStyle: 'bg-gradient-to-br from-[#f0fdf4] via-emerald-50/40 to-white',
-    titleColor: 'text-slate-900 group-hover:text-[#008751]',
+    bgStyle: 'bg-gradient-to-br from-[#f2f9f5] via-white to-white',
+    titleColor: 'text-[#036c3e] group-hover:text-[#02522f]',
     descColor: 'text-slate-700',
-    borderStyle: 'border-emerald-200/90 hover:border-[#008751]',
-    accentBar: 'bg-gradient-to-r from-[#008751] via-emerald-400 to-[#008751]',
+    borderStyle: 'border-[#d6ebe0] hover:border-[#036c3e]',
+    accentBar: 'bg-gradient-to-r from-[#036c3e] via-[#b6960b] to-[#036c3e]',
   },
   {
     id: 'perspective',
     title: 'Long-term Perspective',
     description:
       'Patient capital structured to allow resilient compound growth without artificial pressure.',
-    bgStyle: 'bg-gradient-to-br from-[#fffdfa] via-amber-50/60 to-white',
-    titleColor: 'text-slate-900 group-hover:text-[#008751]',
+    bgStyle: 'bg-gradient-to-br from-[#fcf8e8] via-white to-white',
+    titleColor: 'text-[#036c3e] group-hover:text-[#02522f]',
     descColor: 'text-slate-700',
-    borderStyle: 'border-amber-200/90 hover:border-[#b6950b]',
-    accentBar: 'bg-gradient-to-r from-[#b6950b] via-amber-400 to-[#b6950b]',
+    borderStyle: 'border-[#e6d58f] hover:border-[#b6960b]',
+    accentBar: 'bg-gradient-to-r from-[#b6960b] via-[#036c3e] to-[#b6960b]',
   },
   {
     id: 'relationships',
     title: 'Aligned Relationships',
     description:
       'Deep mutual trust with visionary founders tackling real-world socioeconomic challenges.',
-    bgStyle: 'bg-gradient-to-br from-[#f0fdf4] via-emerald-50/50 to-white',
-    titleColor: 'text-slate-900 group-hover:text-[#008751]',
+    bgStyle: 'bg-gradient-to-br from-[#f2f9f5] via-white to-white',
+    titleColor: 'text-[#036c3e] group-hover:text-[#02522f]',
     descColor: 'text-slate-700',
-    borderStyle: 'border-emerald-200/90 hover:border-[#008751]',
-    accentBar: 'bg-gradient-to-r from-[#008751] via-emerald-400 to-[#008751]',
+    borderStyle: 'border-[#d6ebe0] hover:border-[#036c3e]',
+    accentBar: 'bg-gradient-to-r from-[#036c3e] via-[#b6960b] to-[#036c3e]',
   },
 ];
 
@@ -75,7 +75,7 @@ export default function InteractiveApproachCards() {
                 toggleCard(card.id);
               }
             }}
-            className={`group relative rounded-2xl p-7 lg:p-8 ${card.bgStyle} border ${card.borderStyle} shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#008751] overflow-hidden flex flex-col justify-between`}
+            className={`group relative rounded-2xl p-7 lg:p-8 ${card.bgStyle} border ${card.borderStyle} shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#036c3e] overflow-hidden flex flex-col justify-between`}
           >
             {/* Top Accent Indicator */}
             <div className={`absolute top-0 inset-x-0 h-1 ${card.accentBar}`} />
@@ -86,7 +86,7 @@ export default function InteractiveApproachCards() {
                 <h3 className={`text-xl sm:text-2xl font-extrabold tracking-tight transition-colors ${card.titleColor}`}>
                   {card.title}
                 </h3>
-                <div className="md:hidden flex items-center text-xs text-slate-400 group-hover:text-[#008751]">
+                <div className="md:hidden flex items-center text-xs text-[#b6960b] group-hover:text-[#036c3e]">
                   <ChevronDown
                     className={`w-4 h-4 transition-transform duration-200 ${
                       isExpanded ? 'rotate-180' : ''

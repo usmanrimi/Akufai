@@ -84,8 +84,8 @@ export default function ContactPage() {
   return (
     <div className="bg-white">
       {/* 1. Approved High-Contrast Green Brand Hero */}
-      <section className="py-20 lg:py-28 bg-[#071910] text-white relative overflow-hidden border-b border-[#0d2a1b]">
-        <div className="absolute inset-0 bg-radial from-[#008751]/25 via-transparent to-transparent pointer-events-none" />
+      <section className="py-20 lg:py-28 bg-[#061c11] text-white relative overflow-hidden border-b-2 border-[#b6960b]/40">
+        <div className="absolute inset-0 bg-radial from-[#036c3e]/35 via-transparent to-transparent pointer-events-none" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 relative z-10">
           <h1
             style={{ color: '#ffffff' }}
@@ -94,8 +94,8 @@ export default function ContactPage() {
             For Aligned Inquiries
           </h1>
           <p
-            style={{ color: '#d1fae5' }}
-            className="text-lg sm:text-xl !text-emerald-100/95 leading-relaxed max-w-2xl mx-auto font-medium"
+            style={{ color: '#e6f4ed' }}
+            className="text-lg sm:text-xl !text-emerald-50/95 leading-relaxed max-w-2xl mx-auto font-medium"
           >
             Akufai welcomes a limited number of aligned inquiries, strategic introductions, and partnership conversations.
           </p>
@@ -106,9 +106,9 @@ export default function ContactPage() {
       <section className="py-16 lg:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-stretch">
           {/* Left Column: Clearly Structured Green Information Panel */}
-          <div className="lg:col-span-5 bg-[#071910] text-white rounded-3xl p-8 sm:p-10 lg:p-11 border border-[#0d2a1b] shadow-xl relative overflow-hidden flex flex-col justify-between space-y-8">
+          <div className="lg:col-span-5 bg-[#061c11] text-white rounded-3xl p-8 sm:p-10 lg:p-11 border border-[#b6960b]/35 shadow-xl relative overflow-hidden flex flex-col justify-between space-y-8">
             {/* Subtle Gradient Glow */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-[#008751]/15 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#036c3e]/20 rounded-full blur-3xl pointer-events-none" />
 
             <div className="space-y-6 relative z-10">
               <div className="space-y-2">
@@ -122,9 +122,9 @@ export default function ContactPage() {
 
               {/* Well-Spaced Guideline Items with Restrained Gold Accents */}
               <div className="space-y-5 pt-2">
-                <div className="space-y-1.5 p-4 rounded-2xl bg-[#0d2a1b]/60 border border-emerald-900/40">
-                  <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-300">
-                    <Check className="w-4 h-4 text-[#b6950b]" />
+                <div className="space-y-1.5 p-4 rounded-2xl bg-[#0b2919]/70 border border-[#b6960b]/30">
+                  <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#d4b429]">
+                    <Check className="w-4 h-4 text-[#d4b429]" />
                     <span>Selective Alignment</span>
                   </div>
                   <p className="text-xs sm:text-sm text-slate-300 leading-relaxed pl-6">
@@ -132,9 +132,9 @@ export default function ContactPage() {
                   </p>
                 </div>
 
-                <div className="space-y-1.5 p-4 rounded-2xl bg-[#0d2a1b]/60 border border-emerald-900/40">
-                  <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-300">
-                    <ShieldCheck className="w-4 h-4 text-[#b6950b]" />
+                <div className="space-y-1.5 p-4 rounded-2xl bg-[#0b2919]/70 border border-[#b6960b]/30">
+                  <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#d4b429]">
+                    <ShieldCheck className="w-4 h-4 text-[#d4b429]" />
                     <span>Strict Confidentiality</span>
                   </div>
                   <p className="text-xs sm:text-sm text-slate-300 leading-relaxed pl-6">
@@ -145,18 +145,18 @@ export default function ContactPage() {
             </div>
 
             {/* Direct Channels Footer inside Panel */}
-            <div className="space-y-4 pt-6 border-t border-[#133824] relative z-10">
+            <div className="space-y-4 pt-6 border-t border-[#123823] relative z-10">
               <div className="flex items-start gap-3.5 text-sm text-slate-300">
-                <div className="w-9 h-9 rounded-xl bg-[#0d2a1b] text-emerald-400 flex items-center justify-center shrink-0 border border-emerald-900/50">
-                  <Mail className="w-4 h-4 text-[#b6950b]" />
+                <div className="w-9 h-9 rounded-xl bg-[#0b2919] text-[#d4b429] flex items-center justify-center shrink-0 border border-[#b6960b]/40">
+                  <Mail className="w-4 h-4 text-[#d4b429]" />
                 </div>
                 <div>
-                  <span className="block text-[11px] font-bold text-slate-400 uppercase tracking-wider">
+                  <span className="block text-[11px] font-bold text-[#d4b429] uppercase tracking-wider">
                     Official Inquiries Email
                   </span>
                   <a
                     href="mailto:inquiries@akufaicapitalandequities.com"
-                    className="font-medium text-white hover:text-emerald-300 transition-colors break-all"
+                    className="font-medium text-white hover:text-[#d4b429] transition-colors break-all"
                   >
                     inquiries@akufaicapitalandequities.com
                   </a>
@@ -164,11 +164,11 @@ export default function ContactPage() {
               </div>
 
               <div className="flex items-start gap-3.5 text-sm text-slate-300">
-                <div className="w-9 h-9 rounded-xl bg-[#0d2a1b] text-emerald-400 flex items-center justify-center shrink-0 border border-emerald-900/50">
-                  <MapPin className="w-4 h-4 text-[#b6950b]" />
+                <div className="w-9 h-9 rounded-xl bg-[#0b2919] text-[#d4b429] flex items-center justify-center shrink-0 border border-[#b6960b]/40">
+                  <MapPin className="w-4 h-4 text-[#d4b429]" />
                 </div>
                 <div>
-                  <span className="block text-[11px] font-bold text-slate-400 uppercase tracking-wider">
+                  <span className="block text-[11px] font-bold text-[#d4b429] uppercase tracking-wider">
                     Geographic Focus & Hubs
                   </span>
                   <span className="font-medium text-white">
@@ -197,8 +197,8 @@ export default function ContactPage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 {/* Name */}
                 <div className="space-y-1.5">
-                  <label htmlFor="name" className="block text-xs font-bold uppercase tracking-wider text-slate-700">
-                    Full Name <span className="text-[#008751]">*</span>
+                  <label htmlFor="name" className="block text-xs font-bold uppercase tracking-wider text-[#036c3e]">
+                    Full Name <span className="text-[#b6960b]">*</span>
                   </label>
                   <input
                     type="text"
@@ -208,14 +208,14 @@ export default function ContactPage() {
                     onChange={handleChange}
                     required
                     placeholder="e.g. Dr. Ali Garba"
-                    className="w-full px-4 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-lg text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#008751] focus:border-transparent transition-all"
+                    className="w-full px-4 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-lg text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#036c3e] focus:border-transparent transition-all"
                   />
                 </div>
 
                 {/* Email */}
                 <div className="space-y-1.5">
-                  <label htmlFor="email" className="block text-xs font-bold uppercase tracking-wider text-slate-700">
-                    Corporate Email <span className="text-[#008751]">*</span>
+                  <label htmlFor="email" className="block text-xs font-bold uppercase tracking-wider text-[#036c3e]">
+                    Corporate Email <span className="text-[#b6960b]">*</span>
                   </label>
                   <input
                     type="email"
@@ -225,7 +225,7 @@ export default function ContactPage() {
                     onChange={handleChange}
                     required
                     placeholder="name@firm.com"
-                    className="w-full px-4 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-lg text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#008751] focus:border-transparent transition-all"
+                    className="w-full px-4 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-lg text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#036c3e] focus:border-transparent transition-all"
                   />
                 </div>
               </div>
@@ -233,7 +233,7 @@ export default function ContactPage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 {/* Organization */}
                 <div className="space-y-1.5">
-                  <label htmlFor="organization" className="block text-xs font-bold uppercase tracking-wider text-slate-700">
+                  <label htmlFor="organization" className="block text-xs font-bold uppercase tracking-wider text-[#036c3e]">
                     Organization / Entity
                   </label>
                   <input
@@ -243,13 +243,13 @@ export default function ContactPage() {
                     value={formData.organization}
                     onChange={handleChange}
                     placeholder="e.g. HealthTech Global LLC"
-                    className="w-full px-4 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-lg text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#008751] focus:border-transparent transition-all"
+                    className="w-full px-4 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-lg text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#036c3e] focus:border-transparent transition-all"
                   />
                 </div>
 
                 {/* Inquiry Type */}
                 <div className="space-y-1.5">
-                  <label htmlFor="inquiryType" className="block text-xs font-bold uppercase tracking-wider text-slate-700">
+                  <label htmlFor="inquiryType" className="block text-xs font-bold uppercase tracking-wider text-[#036c3e]">
                     Inquiry Nature
                   </label>
                   <select
@@ -257,7 +257,7 @@ export default function ContactPage() {
                     name="inquiryType"
                     value={formData.inquiryType}
                     onChange={handleChange}
-                    className="w-full px-4 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-lg text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#008751] focus:border-transparent transition-all"
+                    className="w-full px-4 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-lg text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#036c3e] focus:border-transparent transition-all"
                   >
                     <option value="investment">Investment / Venture Proposal</option>
                     <option value="partnership">Strategic Partnership</option>
@@ -269,8 +269,8 @@ export default function ContactPage() {
 
               {/* Subject */}
               <div className="space-y-1.5">
-                <label htmlFor="subject" className="block text-xs font-bold uppercase tracking-wider text-slate-700">
-                  Subject <span className="text-[#008751]">*</span>
+                <label htmlFor="subject" className="block text-xs font-bold uppercase tracking-wider text-[#036c3e]">
+                  Subject <span className="text-[#b6960b]">*</span>
                 </label>
                 <input
                   type="text"
@@ -280,14 +280,14 @@ export default function ContactPage() {
                   onChange={handleChange}
                   required
                   placeholder="Summary of proposition or intro"
-                  className="w-full px-4 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-lg text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#008751] focus:border-transparent transition-all"
+                  className="w-full px-4 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-lg text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#036c3e] focus:border-transparent transition-all"
                 />
               </div>
 
               {/* Message */}
               <div className="space-y-1.5">
-                <label htmlFor="message" className="block text-xs font-bold uppercase tracking-wider text-slate-700">
-                  Message / Proposal Context <span className="text-[#008751]">*</span>
+                <label htmlFor="message" className="block text-xs font-bold uppercase tracking-wider text-[#036c3e]">
+                  Message / Proposal Context <span className="text-[#b6960b]">*</span>
                 </label>
                 <textarea
                   id="message"
@@ -297,14 +297,14 @@ export default function ContactPage() {
                   required
                   rows={4}
                   placeholder="Please provide concise background context on the venture, fundamentals, or partnership alignment..."
-                  className="w-full px-4 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-lg text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#008751] focus:border-transparent transition-all resize-none"
+                  className="w-full px-4 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-lg text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#036c3e] focus:border-transparent transition-all resize-none"
                 />
               </div>
 
               {/* Feedback messages */}
               {status === 'success' && (
-                <div className="p-4 rounded-xl bg-[#f0fdf4] border border-[#dcfce7] flex items-start gap-3 text-sm text-[#008751]">
-                  <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" />
+                <div className="p-4 rounded-xl bg-[#f2f9f5] border border-[#d6ebe0] flex items-start gap-3 text-sm text-[#036c3e]">
+                  <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5 text-[#b6960b]" />
                   <span>{feedback}</span>
                 </div>
               )}
@@ -320,7 +320,7 @@ export default function ContactPage() {
               <button
                 type="submit"
                 disabled={status === 'loading'}
-                className="w-full py-3.5 px-6 rounded-xl text-sm font-semibold text-white bg-[#008751] hover:bg-[#056839] disabled:bg-slate-400 shadow-sm transition-all duration-200 flex items-center justify-center gap-2 active:scale-[0.99] cursor-pointer"
+                className="w-full py-3.5 px-6 rounded-xl text-sm font-semibold text-white bg-[#036c3e] hover:bg-[#02522f] border border-[#b6960b]/40 disabled:bg-slate-400 shadow-sm transition-all duration-200 flex items-center justify-center gap-2 active:scale-[0.99] cursor-pointer"
               >
                 {status === 'loading' ? (
                   <>
@@ -330,7 +330,7 @@ export default function ContactPage() {
                 ) : (
                   <>
                     <span>SUBMIT ALIGNED INQUIRY</span>
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowRight className="w-4 h-4 text-[#d4b429]" />
                   </>
                 )}
               </button>

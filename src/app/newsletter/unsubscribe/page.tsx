@@ -61,16 +61,16 @@ function UnsubscribeContent() {
 
       {status === 'success' ? (
         <div className="space-y-4">
-          <div className="p-4 rounded-lg bg-[#f0fdf4] border border-[#dcfce7] flex items-center justify-center gap-2 text-xs text-[#008751]">
-            <CheckCircle2 className="w-4 h-4 shrink-0" />
+          <div className="p-4 rounded-lg bg-[#f2f9f5] border border-[#d6ebe0] flex items-center justify-center gap-2 text-xs text-[#036c3e]">
+            <CheckCircle2 className="w-4 h-4 shrink-0 text-[#b6960b]" />
             <span>{message}</span>
           </div>
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-xs font-semibold text-[#008751] hover:text-[#056839]"
+            className="inline-flex items-center gap-2 text-xs font-semibold text-[#036c3e] hover:text-[#b6960b]"
           >
             <span>Return to Homepage</span>
-            <ArrowRight className="w-3.5 h-3.5" />
+            <ArrowRight className="w-3.5 h-3.5 text-[#b6960b]" />
           </Link>
         </div>
       ) : (
@@ -81,7 +81,7 @@ function UnsubscribeContent() {
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Your email address"
             required
-            className="w-full px-4 py-2.5 text-sm bg-white border border-slate-300 rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#008751]"
+            className="w-full px-4 py-2.5 text-sm bg-white border border-slate-300 rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#036c3e]"
           />
 
           {status === 'error' && (

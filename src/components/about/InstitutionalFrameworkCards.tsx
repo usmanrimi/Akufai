@@ -24,11 +24,11 @@ const FRAMEWORK_CARDS: FrameworkCard[] = [
     description:
       'Long-term, patient equity aligned with operational founders solving systemic real-world needs across key economic sectors.',
     icon: Scale,
-    accentColor: '#008751',
-    bgGradient: 'from-emerald-50/80 via-white to-white',
-    borderColor: 'border-emerald-200/90 hover:border-[#008751]',
-    iconBg: 'bg-[#f0fdf4]',
-    iconColor: 'text-[#008751]',
+    accentColor: '#036c3e',
+    bgGradient: 'from-[#f2f9f5]/80 via-white to-white',
+    borderColor: 'border-[#d6ebe0] hover:border-[#036c3e]',
+    iconBg: 'bg-[#f2f9f5]',
+    iconColor: 'text-[#036c3e]',
   },
   {
     id: 'cross-border-scope',
@@ -37,11 +37,11 @@ const FRAMEWORK_CARDS: FrameworkCard[] = [
     description:
       'Connecting dynamic African economic hubs with international capital, strategic knowledge, and global execution networks.',
     icon: Globe,
-    accentColor: '#b6950b',
-    bgGradient: 'from-amber-50/60 via-white to-white',
-    borderColor: 'border-amber-200/80 hover:border-[#b6950b]',
-    iconBg: 'bg-amber-50',
-    iconColor: 'text-[#b6950b]',
+    accentColor: '#b6960b',
+    bgGradient: 'from-[#fcf8e8]/70 via-white to-white',
+    borderColor: 'border-[#e6d58f] hover:border-[#b6960b]',
+    iconBg: 'bg-[#fcf8e8]',
+    iconColor: 'text-[#b6960b]',
   },
   {
     id: 'target-sectors',
@@ -50,11 +50,11 @@ const FRAMEWORK_CARDS: FrameworkCard[] = [
     description:
       'Healthtech, Artificial Intelligence, Fintech, Infrastructure & Enabling Systems, Cross-border & Private Growth Deals.',
     icon: Sparkles,
-    accentColor: '#008751',
-    bgGradient: 'from-[#f0fdf4] via-white to-white',
-    borderColor: 'border-emerald-200/90 hover:border-[#008751]',
-    iconBg: 'bg-[#f0fdf4]',
-    iconColor: 'text-[#008751]',
+    accentColor: '#036c3e',
+    bgGradient: 'from-[#f2f9f5]/80 via-white to-white',
+    borderColor: 'border-[#d6ebe0] hover:border-[#036c3e]',
+    iconBg: 'bg-[#f2f9f5]',
+    iconColor: 'text-[#036c3e]',
   },
 ];
 
@@ -84,7 +84,7 @@ export default function InstitutionalFrameworkCards() {
                 toggleCard(card.id);
               }
             }}
-            className={`group relative rounded-2xl p-7 lg:p-8 bg-gradient-to-b ${card.bgGradient} border ${card.borderColor} shadow-xs hover:shadow-lg transition-all duration-300 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#008751] flex flex-col justify-between text-left`}
+            className={`group relative rounded-2xl p-7 lg:p-8 bg-gradient-to-b ${card.bgGradient} border ${card.borderColor} shadow-xs hover:shadow-lg transition-all duration-300 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#036c3e] flex flex-col justify-between text-left`}
           >
             {/* Top Row: Icon & Interactive Hint */}
             <div className="flex items-center justify-between">
@@ -94,11 +94,11 @@ export default function InstitutionalFrameworkCards() {
                 <Icon className="w-6 h-6" />
               </div>
 
-              <div className="md:hidden flex items-center gap-1 text-xs font-semibold text-slate-500 group-hover:text-[#008751]">
+              <div className="md:hidden flex items-center gap-1 text-xs font-semibold text-slate-500 group-hover:text-[#036c3e]">
                 <span>{isExpanded ? 'Collapse' : 'Details'}</span>
                 <ChevronDown
                   className={`w-4 h-4 transition-transform duration-200 ${
-                    isExpanded ? 'rotate-180 text-[#008751]' : ''
+                    isExpanded ? 'rotate-180 text-[#036c3e]' : ''
                   }`}
                 />
               </div>
@@ -106,10 +106,10 @@ export default function InstitutionalFrameworkCards() {
 
             {/* Title & Tagline - Prominently Displayed without 01/02/03 Numbers */}
             <div className="mt-5 space-y-1.5">
-              <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900 group-hover:text-[#008751] transition-colors">
+              <h3 className="text-xl sm:text-2xl font-extrabold text-[#036c3e] group-hover:text-[#02522f] transition-colors">
                 {card.title}
               </h3>
-              <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider">
+              <p className="text-xs font-semibold text-[#b6960b] uppercase tracking-wider">
                 {card.tagline}
               </p>
             </div>

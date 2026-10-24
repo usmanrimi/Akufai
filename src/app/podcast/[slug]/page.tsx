@@ -40,9 +40,9 @@ export default async function PodcastEpisodeDetailPage({ params }: EpisodePagePr
         <div>
           <Link
             href="/podcast"
-            className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#008751] hover:text-[#056839]"
+            className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#036c3e] hover:text-[#02522f]"
           >
-            <ArrowLeft className="w-3.5 h-3.5" />
+            <ArrowLeft className="w-3.5 h-3.5 text-[#b6960b]" />
             <span>Back to All Episodes</span>
           </Link>
         </div>
@@ -50,23 +50,23 @@ export default async function PodcastEpisodeDetailPage({ params }: EpisodePagePr
         {/* Episode Header */}
         <div className="space-y-4 border-b border-slate-100 pb-8">
           <div className="flex flex-wrap items-center gap-3">
-            <span className="px-3 py-1 rounded-md bg-[#f0fdf4] text-[#008751] text-xs font-bold uppercase tracking-wider border border-[#dcfce7]">
+            <span className="px-3 py-1 rounded-md bg-[#f2f9f5] text-[#036c3e] text-xs font-bold uppercase tracking-wider border border-[#b6960b]/40">
               Episode {episode.episodeNumber} • {episode.category}
             </span>
             <div className="flex items-center gap-2 text-xs text-slate-500">
               <span className="flex items-center gap-1">
-                <Calendar className="w-3.5 h-3.5" />
+                <Calendar className="w-3.5 h-3.5 text-[#b6960b]" />
                 {episode.publishDate}
               </span>
               <span>•</span>
               <span className="flex items-center gap-1">
-                <Clock className="w-3.5 h-3.5" />
+                <Clock className="w-3.5 h-3.5 text-[#b6960b]" />
                 {episode.duration}
               </span>
             </div>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-[#036c3e] tracking-tight leading-tight">
             {episode.title}
           </h1>
 
@@ -76,7 +76,7 @@ export default async function PodcastEpisodeDetailPage({ params }: EpisodePagePr
         </div>
 
         {/* Interactive Playable Audio Player */}
-        <div className="bg-slate-900 text-white rounded-2xl p-6 sm:p-8 shadow-xl">
+        <div className="bg-[#061c11] text-white rounded-2xl p-6 sm:p-8 border border-[#b6960b]/35 shadow-xl">
           <AudioPlayer
             audioUrl={episode.audioUrl || ''}
             title={episode.title}
@@ -85,16 +85,16 @@ export default async function PodcastEpisodeDetailPage({ params }: EpisodePagePr
         </div>
 
         {/* Host & Guest Information */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 p-6 rounded-xl bg-slate-50 border border-slate-200">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 p-6 rounded-xl bg-[#f2f9f5]/40 border border-[#e6d58f]">
           <div className="space-y-1">
-            <span className="text-xs font-bold uppercase tracking-wider text-slate-400">Host</span>
-            <p className="text-base font-bold text-slate-900">{episode.hostName}</p>
+            <span className="text-xs font-bold uppercase tracking-wider text-[#b6960b]">Host</span>
+            <p className="text-base font-bold text-[#036c3e]">{episode.hostName}</p>
             <p className="text-xs text-slate-600">Founder & CEO, Akufai Capital & Equities</p>
           </div>
           {episode.guestName && (
             <div className="space-y-1">
-              <span className="text-xs font-bold uppercase tracking-wider text-slate-400">Guest</span>
-              <p className="text-base font-bold text-slate-900">{episode.guestName}</p>
+              <span className="text-xs font-bold uppercase tracking-wider text-[#b6960b]">Guest</span>
+              <p className="text-base font-bold text-[#036c3e]">{episode.guestName}</p>
               <p className="text-xs text-slate-600">{episode.guestRole || 'Featured Contributor'}</p>
             </div>
           )}
@@ -103,11 +103,11 @@ export default async function PodcastEpisodeDetailPage({ params }: EpisodePagePr
         {/* Key Takeaways */}
         {episode.keyTakeaways && episode.keyTakeaways.length > 0 && (
           <div className="space-y-4">
-            <h3 className="text-xl font-bold text-slate-900">Key Discussion Takeaways</h3>
+            <h3 className="text-xl font-bold text-[#036c3e]">Key Discussion Takeaways</h3>
             <div className="space-y-2.5">
               {episode.keyTakeaways.map((takeaway, i) => (
                 <div key={i} className="flex items-start gap-3 text-sm text-slate-700 leading-relaxed">
-                  <div className="w-5 h-5 rounded-full bg-[#f0fdf4] text-[#008751] flex items-center justify-center shrink-0 mt-0.5 border border-[#dcfce7]">
+                  <div className="w-5 h-5 rounded-full bg-[#fcf8e8] text-[#b6960b] flex items-center justify-center shrink-0 mt-0.5 border border-[#e6d58f]">
                     <Check className="w-3.5 h-3.5" />
                   </div>
                   <span>{takeaway}</span>
@@ -120,7 +120,7 @@ export default async function PodcastEpisodeDetailPage({ params }: EpisodePagePr
         {/* Transcript Section */}
         {episode.transcript && (
           <div className="space-y-4 pt-6 border-t border-slate-100">
-            <h3 className="text-xl font-bold text-slate-900">Episode Transcript</h3>
+            <h3 className="text-xl font-bold text-[#036c3e]">Episode Transcript</h3>
             <div className="p-6 rounded-xl bg-slate-50 border border-slate-200 text-sm text-slate-700 leading-relaxed whitespace-pre-line font-mono">
               {episode.transcript}
             </div>
@@ -135,7 +135,7 @@ export default async function PodcastEpisodeDetailPage({ params }: EpisodePagePr
               href={episode.spotifyUrl || 'https://open.spotify.com'}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-3.5 py-1.5 rounded-lg border border-slate-200 text-xs font-medium text-slate-700 hover:bg-slate-50 hover:text-emerald-700 transition-colors"
+              className="px-3.5 py-1.5 rounded-lg border border-[#e6d58f] text-xs font-medium text-[#036c3e] hover:bg-[#f2f9f5] hover:border-[#036c3e] transition-colors"
             >
               Spotify
             </a>
@@ -143,7 +143,7 @@ export default async function PodcastEpisodeDetailPage({ params }: EpisodePagePr
               href={episode.appleUrl || 'https://podcasts.apple.com'}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-3.5 py-1.5 rounded-lg border border-slate-200 text-xs font-medium text-slate-700 hover:bg-slate-50 hover:text-emerald-700 transition-colors"
+              className="px-3.5 py-1.5 rounded-lg border border-[#e6d58f] text-xs font-medium text-[#036c3e] hover:bg-[#f2f9f5] hover:border-[#036c3e] transition-colors"
             >
               Apple Podcasts
             </a>

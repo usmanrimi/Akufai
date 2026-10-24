@@ -20,7 +20,7 @@ export default function PodcastFeature({ episodes }: PodcastFeatureProps) {
             <div className="lg:col-span-7 space-y-6">
 
               <div className="space-y-3">
-                <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                <h2 className="text-3xl sm:text-4xl font-extrabold text-[#036c3e] tracking-tight">
                   Akufai Conversations
                 </h2>
                 <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-medium">
@@ -42,7 +42,7 @@ export default function PodcastFeature({ episodes }: PodcastFeatureProps) {
                 ].map((topic, i) => (
                   <span
                     key={i}
-                    className="px-3 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-medium"
+                    className="px-3 py-1 rounded-md bg-[#f2f9f5] text-[#036c3e] border border-[#d6ebe0] text-xs font-medium"
                   >
                     {topic}
                   </span>
@@ -53,15 +53,15 @@ export default function PodcastFeature({ episodes }: PodcastFeatureProps) {
               <div className="pt-4 flex flex-wrap items-center gap-4">
                 <Link
                   href="/podcast"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-semibold text-white bg-[#008751] hover:bg-[#056839] rounded-lg shadow-sm transition-all active:scale-[0.98] group"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-semibold text-white bg-[#036c3e] hover:bg-[#02522f] border border-[#b6960b]/30 rounded-lg shadow-sm transition-all active:scale-[0.98] group"
                 >
-                  <Headphones className="w-4 h-4" />
+                  <Headphones className="w-4 h-4 text-[#d4b429] group-hover:text-white transition-colors" />
                   <span>Explore Podcast Episodes</span>
                 </Link>
 
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center gap-2 px-5 py-3.5 text-sm font-semibold text-slate-700 bg-slate-50 hover:bg-[#f0fdf4] hover:text-[#008751] border border-slate-200 hover:border-[#008751]/40 rounded-lg transition-all active:scale-[0.98] group"
+                  className="inline-flex items-center justify-center gap-2 px-5 py-3.5 text-sm font-bold text-[#042f1b] bg-[#b6960b] hover:bg-[#9e8109] hover:text-white border border-[#b6960b] rounded-lg transition-all active:scale-[0.98] group"
                 >
                   <span>Suggest a Topic or Guest</span>
                   <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" />
@@ -71,18 +71,18 @@ export default function PodcastFeature({ episodes }: PodcastFeatureProps) {
 
             {/* Right Card / Player Preview */}
             <div className="lg:col-span-5">
-              <div className="bg-slate-900 text-white rounded-xl p-6 shadow-xl space-y-5 relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-[#008751]/20 rounded-full blur-2xl pointer-events-none" />
+              <div className="bg-[#061c11] text-white rounded-xl p-6 shadow-xl border border-[#b6960b]/30 space-y-5 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#036c3e]/25 rounded-full blur-2xl pointer-events-none" />
 
                 <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2 text-xs font-mono text-emerald-400">
-                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+                  <div className="flex items-center gap-2 text-xs font-mono text-[#d4b429]">
+                    <span className="w-2 h-2 rounded-full bg-[#d4b429] animate-ping" />
                     PREVIEW STREAM
                   </div>
                   <span className="text-xs text-slate-400">Episode 01</span>
                 </div>
 
-                <div className="relative aspect-video rounded-lg overflow-hidden bg-slate-800 border border-slate-700">
+                <div className="relative aspect-video rounded-lg overflow-hidden bg-slate-800 border border-[#b6960b]/30">
                   <Image
                     src={featured?.coverImageUrl || '/images/blog_fintech_wave.jpg'}
                     alt="Podcast preview"
@@ -92,7 +92,7 @@ export default function PodcastFeature({ episodes }: PodcastFeatureProps) {
                   <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                     <Link
                       href={`/podcast/${featured?.slug || 'inside-next-fintech-infrastructure-wave'}`}
-                      className="w-14 h-14 rounded-full bg-[#008751] text-white flex items-center justify-center shadow-lg hover:scale-110 transition-transform focus:outline-none"
+                      className="w-14 h-14 rounded-full bg-[#036c3e] hover:bg-[#02522f] text-white ring-2 ring-[#b6960b]/70 flex items-center justify-center shadow-lg hover:scale-110 transition-transform focus:outline-none"
                       aria-label="Play preview audio"
                     >
                       <Play className="w-6 h-6 fill-white translate-x-0.5" />
@@ -101,7 +101,7 @@ export default function PodcastFeature({ episodes }: PodcastFeatureProps) {
                 </div>
 
                 <div className="space-y-1">
-                  <p className="text-xs font-semibold text-emerald-400 uppercase tracking-wider">
+                  <p className="text-xs font-semibold text-[#d4b429] uppercase tracking-wider">
                     {featured?.category || 'Fintech Infrastructure'}
                   </p>
                   <h4 className="text-base font-bold text-white leading-snug">

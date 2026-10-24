@@ -101,7 +101,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     return (
       <div className="min-h-screen bg-slate-50 flex items-center justify-center">
         <div className="text-center space-y-3">
-          <div className="w-10 h-10 border-4 border-[#008751] border-t-transparent rounded-full animate-spin mx-auto" />
+          <div className="w-10 h-10 border-4 border-[#036c3e] border-t-transparent rounded-full animate-spin mx-auto" />
           <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider">
             Loading Super Admin Workspace...
           </p>
@@ -120,13 +120,13 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         <div className="flex items-center gap-2">
           <Link
             href="/admin/publishing"
-            className="px-2.5 py-1 text-[11px] font-bold text-white bg-[#008751] rounded-md shadow-xs"
+            className="px-2.5 py-1 text-[11px] font-bold text-white bg-[#036c3e] rounded-md shadow-xs"
           >
             Publish
           </Link>
           <button
             onClick={() => setSidebarOpen(!sidebarOpen)}
-            className="p-2 rounded-lg text-slate-700 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-[#008751]"
+            className="p-2 rounded-lg text-slate-700 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-[#036c3e]"
             aria-label="Toggle Navigation Sidebar"
           >
             {sidebarOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -155,7 +155,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
               </div>
             </Link>
             <div className="flex items-center justify-between pt-1">
-              <span className="text-[10px] font-mono uppercase tracking-wider font-bold text-[#008751] bg-[#f0fdf4] px-2 py-0.5 rounded border border-[#dcfce7]">
+              <span className="text-[10px] font-mono uppercase tracking-wider font-bold text-[#036c3e] bg-[#f0fdf4] px-2 py-0.5 rounded border border-[#dcfce7]">
                 Super Admin
               </span>
               <span className="text-[10px] font-mono text-slate-400 font-medium">
@@ -178,15 +178,15 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
                   onClick={() => setSidebarOpen(false)}
                   className={`flex items-center justify-between px-3.5 py-2.5 text-xs font-medium rounded-lg transition-all duration-150 ${
                     isActive
-                      ? 'text-[#008751] bg-[#f0fdf4] font-bold border-l-3 border-[#008751] shadow-xs'
+                      ? 'text-[#036c3e] bg-[#f0fdf4] font-bold border-l-3 border-[#036c3e] shadow-xs'
                       : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
                   }`}
                 >
                   <div className="flex items-center gap-2.5">
-                    <Icon className={`w-4 h-4 shrink-0 ${isActive ? 'text-[#008751]' : 'text-slate-400'}`} />
+                    <Icon className={`w-4 h-4 shrink-0 ${isActive ? 'text-[#036c3e]' : 'text-slate-400'}`} />
                     <span>{item.name}</span>
                   </div>
-                  {isActive && <ChevronRight className="w-3.5 h-3.5 text-[#008751]" />}
+                  {isActive && <ChevronRight className="w-3.5 h-3.5 text-[#036c3e]" />}
                 </Link>
               );
             })}
@@ -195,7 +195,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
           {/* User Profile & Sign Out Footer */}
           <div className="p-4 border-t border-slate-200/90 bg-slate-50/80 space-y-3">
             <div className="flex items-center gap-2.5 text-xs">
-              <div className="w-8 h-8 rounded-full bg-[#008751] text-white flex items-center justify-center font-bold text-xs shrink-0 shadow-xs">
+              <div className="w-8 h-8 rounded-full bg-[#036c3e] text-white flex items-center justify-center font-bold text-xs shrink-0 shadow-xs">
                 {user?.name ? user.name.charAt(0).toUpperCase() : 'A'}
               </div>
               <div className="min-w-0 flex-1">
@@ -245,7 +245,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
             {/* Publishing & Deployments CTA */}
             <Link
               href="/admin/publishing"
-              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-bold text-white bg-[#008751] hover:bg-[#056839] rounded-lg shadow-xs transition-colors group"
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-bold text-white bg-[#036c3e] hover:bg-[#02522f] rounded-lg shadow-xs transition-colors group"
             >
               <Send className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
               <span>Publish Changes</span>

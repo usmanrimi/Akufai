@@ -100,7 +100,7 @@ export default function AdminPodcastPage() {
 
         <button
           onClick={handleCreateNew}
-          className="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold text-white bg-[#008751] hover:bg-[#056839] rounded-lg shadow-xs transition-colors"
+          className="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold text-white bg-[#036c3e] hover:bg-[#02522f] rounded-lg shadow-xs transition-colors"
         >
           <Plus className="w-3.5 h-3.5" />
           <span>New Podcast Episode</span>
@@ -108,7 +108,7 @@ export default function AdminPodcastPage() {
       </div>
 
       {message && (
-        <div className="p-3 bg-[#f0fdf4] border border-[#dcfce7] rounded-lg text-xs text-[#008751] flex items-center gap-2">
+        <div className="p-3 bg-[#f0fdf4] border border-[#dcfce7] rounded-lg text-xs text-[#036c3e] flex items-center gap-2">
           <CheckCircle2 className="w-4 h-4 shrink-0" />
           <span>{message}</span>
         </div>
@@ -249,7 +249,7 @@ export default function AdminPodcastPage() {
               <button
                 onClick={handleSave}
                 disabled={saving}
-                className="px-5 py-2 text-xs font-bold text-white bg-[#008751] hover:bg-[#056839] rounded-lg shadow-sm flex items-center gap-1.5"
+                className="px-5 py-2 text-xs font-bold text-white bg-[#036c3e] hover:bg-[#02522f] rounded-lg shadow-sm flex items-center gap-1.5"
               >
                 {saving ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <Save className="w-3.5 h-3.5" />}
                 <span>Save Episode</span>
@@ -266,7 +266,7 @@ export default function AdminPodcastPage() {
             <div key={ep.id} className="p-5 hover:bg-slate-50 transition-colors flex items-center justify-between gap-4">
               <div className="space-y-1">
                 <div className="flex items-center gap-2">
-                  <span className="text-xs font-bold text-[#008751]">EPISODE {ep.episodeNumber}</span>
+                  <span className="text-xs font-bold text-[#036c3e]">EPISODE {ep.episodeNumber}</span>
                   <span className="text-xs text-slate-400">•</span>
                   <span className="text-xs font-medium text-slate-600">{ep.category}</span>
                   <span className="text-xs text-slate-400">•</span>
@@ -291,14 +291,14 @@ export default function AdminPodcastPage() {
                 <a
                   href={`/podcast/${ep.slug}`}
                   target="_blank"
-                  className="p-2 text-slate-400 hover:text-[#008751] rounded-lg hover:bg-slate-100"
+                  className="p-2 text-slate-400 hover:text-[#036c3e] rounded-lg hover:bg-slate-100"
                   title="View on public site"
                 >
                   <ExternalLink className="w-4 h-4" />
                 </a>
                 <button
                   onClick={() => setEditingEpisode(ep)}
-                  className="p-2 text-slate-600 hover:text-[#008751] rounded-lg hover:bg-slate-100"
+                  className="p-2 text-slate-600 hover:text-[#036c3e] rounded-lg hover:bg-slate-100"
                   title="Edit episode"
                 >
                   <Edit3 className="w-4 h-4" />

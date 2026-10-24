@@ -42,14 +42,14 @@ export default function NewsletterSection() {
   };
 
   return (
-    <section id="newsletter" className="py-16 lg:py-20 bg-slate-50/80 border-b border-slate-100">
+    <section id="newsletter" className="py-16 lg:py-20 bg-white border-b border-slate-100">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-        <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#f0fdf4] text-[#008751] border border-[#dcfce7] shadow-xs">
+        <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#fcf8e8] text-[#b6960b] border border-[#e6d58f] shadow-xs">
           <Mail className="w-5 h-5" />
         </div>
 
         <div className="space-y-3">
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#036c3e] tracking-tight">
             Stay connected to selected Akufai updates
           </h2>
           <p className="text-sm sm:text-base text-slate-600 max-w-xl mx-auto leading-relaxed">
@@ -65,13 +65,13 @@ export default function NewsletterSection() {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email"
               required
-              className="flex-1 px-4 py-3 text-sm bg-white border border-slate-300 rounded-lg text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#008751] focus:border-transparent transition-all shadow-xs"
+              className="flex-1 px-4 py-3 text-sm bg-white border border-slate-300 rounded-lg text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#036c3e] focus:border-transparent transition-all shadow-xs"
               aria-label="Email address for firm updates"
             />
             <button
               type="submit"
               disabled={status === 'loading'}
-              className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white bg-[#008751] hover:bg-[#056839] disabled:bg-slate-400 rounded-lg shadow-sm transition-all whitespace-nowrap active:scale-[0.98]"
+              className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white bg-[#036c3e] hover:bg-[#02522f] disabled:bg-slate-400 rounded-lg shadow-sm transition-all whitespace-nowrap active:scale-[0.98]"
             >
               {status === 'loading' ? (
                 <Loader2 className="w-4 h-4 animate-spin" />
@@ -82,8 +82,8 @@ export default function NewsletterSection() {
           </div>
 
           {status === 'success' && (
-            <div className="flex items-center justify-center gap-2 text-xs text-[#008751] bg-[#f0fdf4] p-3 rounded-lg border border-[#dcfce7]">
-              <CheckCircle2 className="w-4 h-4 shrink-0" />
+            <div className="flex items-center justify-center gap-2 text-xs text-[#036c3e] bg-[#f2f9f5] p-3 rounded-lg border border-[#d6ebe0]">
+              <CheckCircle2 className="w-4 h-4 shrink-0 text-[#b6960b]" />
               <span>{message}</span>
             </div>
           )}

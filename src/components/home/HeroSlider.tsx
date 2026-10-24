@@ -85,7 +85,7 @@ export default function HeroSlider({ slides }: HeroSliderProps) {
           <div className="lg:col-span-6 space-y-6 lg:space-y-8 z-10">
             <div key={`text-${current.id}`} className="space-y-5 transition-all duration-500 ease-out">
               {/* Main Hero Headline */}
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.1]">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#036c3e] tracking-tight leading-[1.1]">
                 {current.title}
               </h1>
 
@@ -98,15 +98,15 @@ export default function HeroSlider({ slides }: HeroSliderProps) {
               <div className="pt-2 flex flex-wrap items-center gap-4">
                 <Link
                   href={current.primaryCtaLink || '/about'}
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-semibold text-white bg-[#008751] hover:bg-[#056839] rounded-lg shadow-sm transition-all duration-200 active:scale-[0.98] group/btn"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-semibold text-white bg-[#036c3e] hover:bg-[#02522f] border border-[#b6960b]/30 rounded-lg shadow-sm transition-all duration-200 active:scale-[0.98] group/btn"
                 >
                   <span>{current.primaryCtaText || 'About Akufai'}</span>
-                  <ArrowUpRight className="w-4 h-4 transition-transform duration-200 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
+                  <ArrowUpRight className="w-4 h-4 text-[#d4b429] group-hover/btn:text-white transition-all duration-200 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
                 </Link>
 
                 <Link
                   href={current.secondaryCtaLink || '/contact'}
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-semibold text-slate-800 bg-slate-50 hover:bg-[#f0fdf4] hover:text-[#008751] border border-slate-200 hover:border-[#008751]/40 rounded-lg transition-all duration-200 active:scale-[0.98]"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-bold text-[#042f1b] bg-[#b6960b] hover:bg-[#9e8109] hover:text-white border border-[#b6960b] rounded-lg shadow-xs transition-all duration-200 active:scale-[0.98]"
                 >
                   <span>{current.secondaryCtaText || 'Get in Touch'}</span>
                 </Link>
@@ -118,7 +118,7 @@ export default function HeroSlider({ slides }: HeroSliderProps) {
               <button
                 type="button"
                 onClick={() => setIsPlaying(!isPlaying)}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-slate-600 bg-slate-100 hover:bg-slate-200 focus:bg-[#f0fdf4] focus:text-[#008751] focus:ring-2 focus:ring-[#008751] rounded-full transition-all focus:outline-none opacity-0 focus:opacity-100 group-focus-within:opacity-100 hover:opacity-100"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-slate-600 bg-slate-100 hover:bg-slate-200 focus:bg-[#f2f9f5] focus:text-[#036c3e] focus:ring-2 focus:ring-[#036c3e] rounded-full transition-all focus:outline-none opacity-0 focus:opacity-100 group-focus-within:opacity-100 hover:opacity-100"
                 aria-label={isPlaying ? 'Pause slideshow' : 'Resume slideshow'}
               >
                 {isPlaying ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5" />}
@@ -129,7 +129,7 @@ export default function HeroSlider({ slides }: HeroSliderProps) {
 
           {/* Right Column: Hero Photograph */}
           <div className="lg:col-span-6 relative">
-            <div className="relative aspect-[4/3] sm:aspect-[16/11] rounded-2xl overflow-hidden shadow-xl border-2 border-[#b6950b]/25 bg-slate-100">
+            <div className="relative aspect-[4/3] sm:aspect-[16/11] rounded-2xl overflow-hidden shadow-xl border-2 border-[#b6960b]/40 bg-slate-100">
               <div key={`img-${current.id}`} className="relative w-full h-full transition-opacity duration-500 ease-in-out">
                 <Image
                   src={current.imageUrl || '/images/hero_patient_capital.png'}

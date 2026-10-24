@@ -3,19 +3,38 @@
 :root {
   --background: #ffffff;
   --foreground: #0f172a;
-  --brand-green: #008751;
-  --brand-green-hover: #056839;
-  --brand-green-deep: #034224;
-  --brand-green-light: #f0fdf4;
-  --brand-green-subtle: #dcfce7;
-  --brand-gold: #b6950b;
-  --brand-gold-subtle: #fef9c3;
-  --brand-gold-accent: #c8a32a;
+  --brand-green: #036c3e;
+  --brand-green-hover: #02522f;
+  --brand-green-deep: #042f1b;
+  --brand-green-hero: #061c11;
+  --brand-green-light: #f2f9f5;
+  --brand-green-subtle: #d6ebe0;
+  --brand-gold: #b6960b;
+  --brand-gold-hover: #9e8109;
+  --brand-gold-light: #d4b429;
+  --brand-gold-subtle: #fcf8e8;
+  --brand-gold-accent: #c8a612;
+  --brand-gold-border: #e6d58f;
   --neutral-charcoal: #1e293b;
   --neutral-body: #334155;
   --neutral-muted: #64748b;
   --neutral-light: #f8fafc;
   --neutral-border: #e2e8f0;
+}
+
+@theme {
+  --color-brand-green: #036c3e;
+  --color-brand-green-hover: #02522f;
+  --color-brand-green-deep: #042f1b;
+  --color-brand-green-hero: #061c11;
+  --color-brand-green-light: #f2f9f5;
+  --color-brand-green-subtle: #d6ebe0;
+  --color-brand-gold: #b6960b;
+  --color-brand-gold-hover: #9e8109;
+  --color-brand-gold-light: #d4b429;
+  --color-brand-gold-subtle: #fcf8e8;
+  --color-brand-gold-accent: #c8a612;
+  --color-brand-gold-border: #e6d58f;
 }
 
 body {
@@ -36,7 +55,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Custom selection styling */
 ::selection {
-  background-color: #008751;
+  background-color: var(--brand-green);
   color: #ffffff;
 }
 
@@ -58,12 +77,12 @@ html {
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  background: var(--brand-green);
 }
 
 /* Accessible focus ring */
 :focus-visible {
-  outline: 2px solid #008751;
+  outline: 2px solid var(--brand-green);
   outline-offset: 2px;
 }
 

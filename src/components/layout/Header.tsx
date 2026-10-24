@@ -41,14 +41,14 @@ export default function Header() {
       }`}
     >
       {/* Subtle Logo-Sampled Gold Top Accent Line */}
-      <div className="absolute top-0 inset-x-0 h-[2.5px] bg-gradient-to-r from-[#008751] via-[#b6950b] to-[#008751]" />
+      <div className="absolute top-0 inset-x-0 h-[2.5px] bg-gradient-to-r from-[#036c3e] via-[#b6960b] to-[#036c3e]" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between gap-4">
           {/* Prominent brand logo with natural proportions */}
           <Link
             href="/"
-            className="flex items-center shrink-0 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#008751] rounded-lg"
+            className="flex items-center shrink-0 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#036c3e] rounded-lg"
             aria-label="Akufai Capital & Equities Home"
           >
             <div className="relative h-14 w-52 sm:h-16 sm:w-60 lg:h-18 lg:w-72 transition-transform duration-300 group-hover:opacity-95">
@@ -76,13 +76,13 @@ export default function Header() {
                   href={link.href}
                   className={`relative px-3.5 py-2 text-[14.5px] font-medium rounded-lg transition-all duration-200 ${
                     isActive
-                      ? 'text-[#008751] font-semibold bg-[#f0fdf4]'
-                      : 'text-slate-700 hover:text-[#008751] hover:bg-slate-50'
+                      ? 'text-[#036c3e] font-semibold bg-[#f2f9f5]'
+                      : 'text-slate-700 hover:text-[#036c3e] hover:bg-[#f2f9f5]/60'
                   }`}
                 >
                   {link.name}
                   {isActive && (
-                    <span className="absolute bottom-0.5 left-3.5 right-3.5 h-[2px] bg-[#008751] rounded-full" />
+                    <span className="absolute bottom-0.5 left-3.5 right-3.5 h-[2.5px] bg-[#b6960b] rounded-full" />
                   )}
                 </Link>
               );
@@ -93,10 +93,10 @@ export default function Header() {
           <div className="hidden md:flex items-center gap-3">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-1.5 px-5 py-2.5 text-sm font-semibold text-white bg-[#008751] hover:bg-[#056839] rounded-lg shadow-xs hover:shadow transition-all duration-200 active:scale-[0.98] group"
+              className="inline-flex items-center gap-1.5 px-5 py-2.5 text-sm font-semibold text-white bg-[#036c3e] hover:bg-[#02522f] border border-[#b6960b]/40 rounded-lg shadow-xs hover:shadow transition-all duration-200 active:scale-[0.98] group"
             >
               <span>Get in Touch</span>
-              <ArrowUpRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              <ArrowUpRight className="w-4 h-4 text-[#d4b429] group-hover:text-white transition-all duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Link>
           </div>
 
@@ -105,7 +105,7 @@ export default function Header() {
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               type="button"
-              className="p-2.5 rounded-lg text-slate-700 hover:text-[#008751] hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-[#008751] transition-colors"
+              className="p-2.5 rounded-lg text-slate-700 hover:text-[#036c3e] hover:bg-[#f2f9f5] focus:outline-none focus:ring-2 focus:ring-[#036c3e] transition-colors"
               aria-expanded={mobileMenuOpen}
               aria-label="Toggle navigation menu"
             >
@@ -131,8 +131,8 @@ export default function Header() {
                   href={link.href}
                   className={`px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
                     isActive
-                      ? 'bg-[#f0fdf4] text-[#008751] font-semibold border-l-3 border-[#008751]'
-                      : 'text-slate-700 hover:bg-slate-50 hover:text-[#008751]'
+                      ? 'bg-[#f2f9f5] text-[#036c3e] font-semibold border-l-3 border-[#b6960b]'
+                      : 'text-slate-700 hover:bg-[#f2f9f5]/60 hover:text-[#036c3e]'
                   }`}
                 >
                   {link.name}
@@ -144,10 +144,10 @@ export default function Header() {
           <div className="pt-2">
             <Link
               href="/contact"
-              className="w-full flex items-center justify-center gap-2 px-5 py-3 text-sm font-semibold text-white bg-[#008751] hover:bg-[#056839] rounded-lg shadow-sm transition-colors"
+              className="w-full flex items-center justify-center gap-2 px-5 py-3 text-sm font-semibold text-white bg-[#036c3e] hover:bg-[#02522f] border border-[#b6960b]/40 rounded-lg shadow-sm transition-colors"
             >
               <span>Get in Touch</span>
-              <ArrowUpRight className="w-4 h-4" />
+              <ArrowUpRight className="w-4 h-4 text-[#d4b429]" />
             </Link>
           </div>
         </div>
