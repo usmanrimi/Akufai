@@ -213,8 +213,7 @@ export default function HeroSlider({ slides }: HeroSliderProps) {
                       priority={idx === 0}
                       loading="eager"
                       sizes="(max-width: 1024px) 100vw, 50vw"
-                      style={{ objectFit: 'contain' }}
-                      className="object-contain object-center"
+                      className="object-cover object-top"
                     />
                   </div>
                 );
