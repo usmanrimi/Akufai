@@ -20,9 +20,23 @@ export default async function PodcastPage() {
 
   return (
     <div className="gold-surface-wash">
-      {/* 1. Approved High-Contrast Green Brand Hero with Ambient Golden Glow */}
+      {/* 1. Approved High-Contrast Green Brand Hero with Original Green Logo Icon Watermark */}
       <section className="py-20 lg:py-28 bg-[#061c11] text-white relative overflow-hidden border-b-2 border-[#b6960b]">
-        <div className="absolute inset-0 bg-radial from-[#b6960b]/28 via-[#036c3e]/20 to-transparent pointer-events-none gold-ambient-glow" />
+        <div className="absolute inset-0 bg-radial from-[#b6960b]/22 via-[#036c3e]/20 to-transparent pointer-events-none gold-ambient-glow z-0" />
+        {/* Original Green Brand Logo Icon Watermark */}
+        <div
+          className="absolute right-4 sm:right-10 lg:right-20 top-1/2 -translate-y-1/2 w-[230px] h-[195px] sm:w-[320px] sm:h-[270px] lg:w-[390px] lg:h-[330px] pointer-events-none select-none z-[5]"
+          aria-hidden="true"
+        >
+          <div className="absolute inset-0 bg-radial from-white/15 via-[#036c3e]/25 to-transparent rounded-full blur-2xl" />
+          <Image
+            src="/images/logo-icon.png"
+            alt=""
+            fill
+            sizes="390px"
+            className="object-contain opacity-35 brightness-150 saturate-150 drop-shadow-[0_0_18px_rgba(255,255,255,0.22)]"
+          />
+        </div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 relative z-10">
           <h1
             style={{ color: '#ffffff' }}

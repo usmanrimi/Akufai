@@ -48,17 +48,18 @@ export default function Footer() {
       {/* Subtle Ambient Golden Glow at Top of Footer */}
       <div className="absolute top-0 inset-x-0 h-48 bg-radial from-[#b6960b]/20 via-transparent to-transparent pointer-events-none gold-ambient-glow" />
 
-      {/* Enlarged, Low-Opacity Existing Logo Icon Background Watermark */}
+      {/* Enlarged, Low-Opacity Existing Logo Icon Background Watermark (Original Green Brand Colour) */}
       <div
-        className="absolute -right-12 -bottom-10 sm:right-8 sm:-bottom-12 lg:right-16 lg:top-1/2 lg:-translate-y-1/2 w-[300px] h-[250px] sm:w-[420px] sm:h-[350px] lg:w-[500px] lg:h-[420px] opacity-[0.06] pointer-events-none select-none z-0"
+        className="absolute -right-12 -bottom-10 sm:right-8 sm:-bottom-12 lg:right-16 lg:top-1/2 lg:-translate-y-1/2 w-[300px] h-[250px] sm:w-[420px] sm:h-[350px] lg:w-[500px] lg:h-[420px] pointer-events-none select-none z-0"
         aria-hidden="true"
       >
+        <div className="absolute inset-0 bg-radial from-white/10 via-[#036c3e]/20 to-transparent rounded-full blur-2xl" />
         <Image
-          src="/images/logo-icon-watermark.png"
+          src="/images/logo-icon.png"
           alt=""
           fill
           sizes="500px"
-          className="object-contain"
+          className="object-contain opacity-25 brightness-150 saturate-150"
         />
       </div>
 

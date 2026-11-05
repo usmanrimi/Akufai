@@ -15,7 +15,11 @@ const NAV_LINKS = [
   { name: 'Contact', href: '/contact' },
 ];
 
-export default function Header() {
+interface HeaderProps {
+  onOpenDisclaimer?: () => void;
+}
+
+export default function Header({ onOpenDisclaimer }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
@@ -89,8 +93,16 @@ export default function Header() {
             })}
           </nav>
 
-          {/* Desktop "Get in Touch" Button */}
-          <div className="hidden md:flex items-center gap-3">
+          {/* Desktop "Disclaimer" & "Get in Touch" Buttons */}
+          <div className="hidden md:flex items-center gap-2.5">
+            <button
+              type="button"
+              onClick={onOpenDisclaimer}
+              className="px-3 py-2 text-xs font-semibold text-[#042f1b] bg-[#fcf6df]/90 hover:bg-[#f5e7b8] border border-[#dec668] rounded-lg transition-all duration-200 cursor-pointer"
+            >
+              Disclaimer
+            </button>
+
             <Link
               href="/contact"
               className="gold-btn-luxury inline-flex items-center gap-1.5 px-5 py-2.5 text-sm font-bold rounded-lg active:scale-[0.98] group"
@@ -100,8 +112,16 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* Mobile Menu Toggle Button */}
-          <div className="flex md:hidden items-center">
+          {/* Mobile Disclaimer & Menu Toggle Buttons */}
+          <div className="flex md:hidden items-center gap-2">
+            <button
+              type="button"
+              onClick={onOpenDisclaimer}
+              className="px-2.5 py-1.5 text-xs font-semibold text-[#042f1b] bg-[#fcf6df] hover:bg-[#f5e7b8] border border-[#dec668] rounded-lg transition-colors cursor-pointer"
+            >
+              Disclaimer
+            </button>
+
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               type="button"
@@ -141,7 +161,18 @@ export default function Header() {
             })}
           </nav>
 
-          <div className="pt-2">
+          <div className="pt-2 flex flex-col gap-2">
+            <button
+              type="button"
+              onClick={() => {
+                setMobileMenuOpen(false);
+                onOpenDisclaimer?.();
+              }}
+              className="w-full py-2.5 px-4 text-xs font-semibold text-[#042f1b] bg-[#fcf6df] hover:bg-[#f5e7b8] border border-[#dec668] rounded-lg transition-colors cursor-pointer"
+            >
+              View Website Disclaimer
+            </button>
+
             <Link
               href="/contact"
               className="gold-btn-luxury w-full flex items-center justify-center gap-2 px-5 py-3 text-sm font-bold rounded-lg"

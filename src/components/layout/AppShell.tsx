@@ -1,13 +1,46 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import DisclaimerModal from '@/components/layout/DisclaimerModal';
+
+const DISCLAIMER_STORAGE_KEY = 'akufai_disclaimer_accepted_v1';
 
 export default function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const isAdmin = pathname.startsWith('/admin');
+
+  const [isDisclaimerOpen, setIsDisclaimerOpen] = useState(false);
+  const [hasAcceptedDisclaimer, setHasAcceptedDisclaimer] = useState(false);
+
+  // Check first-visit disclaimer status on mount
+  useEffect(() => {
+    if (isAdmin || typeof window === 'undefined') return;
+    try {
+      const accepted = window.localStorage.getItem(DISCLAIMER_STORAGE_KEY) === 'true';
+      if (accepted) {
+        setHasAcceptedDisclaimer(true);
+        setIsDisclaimerOpen(false);
+      } else {
+        setHasAcceptedDisclaimer(false);
+        setIsDisclaimerOpen(true);
+      }
+    } catch {
+      setIsDisclaimerOpen(true);
+    }
+  }, [isAdmin]);
+
+  const handleAcceptDisclaimer = () => {
+    try {
+      window.localStorage.setItem(DISCLAIMER_STORAGE_KEY, 'true');
+    } catch {
+      // Ignore storage errors
+    }
+    setHasAcceptedDisclaimer(true);
+    setIsDisclaimerOpen(false);
+  };
 
   // Lightweight scroll-reveal observer for subtle fade-in & slide-up animations across all pages
   useEffect(() => {
@@ -44,7 +77,6 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
     );
 
     elements.forEach((el, idx) => {
-      // Do not hide elements already well within the initial viewport fold
       const rect = el.getBoundingClientRect();
       if (rect.top < window.innerHeight * 0.88) {
         el.setAttribute('data-scroll-reveal', 'visible');
@@ -66,9 +98,17 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
   // Public website layout
   return (
     <>
-      <Header />
+      <Header onOpenDisclaimer={() => setIsDisclaimerOpen(true)} />
       <main className="flex-grow page-fade-enter">{children}</main>
       <Footer />
+      <DisclaimerModal
+        isOpen={isDisclaimerOpen}
+        hasAccepted={hasAcceptedDisclaimer}
+        onAccept={handleAcceptDisclaimer}
+        onClose={() => {
+          if (hasAcceptedDisclaimer) setIsDisclaimerOpen(false);
+        }}
+      />
     </>
   );
 }

@@ -41,7 +41,7 @@ export default function FounderActionSlider() {
     setCurrentIndex((prev) => (prev - 1 + ACTION_SLIDES.length) % ACTION_SLIDES.length);
   }, []);
 
-  // Autoplay ~3s with reduced-motion check
+  // Smooth ~4.5s autoplay with reduced-motion check
   useEffect(() => {
     if (typeof window === 'undefined') return;
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -51,7 +51,7 @@ export default function FounderActionSlider() {
     }
 
     if (!isPlaying) return;
-    const interval = setInterval(nextSlide, 3000);
+    const interval = setInterval(nextSlide, 4500);
     return () => clearInterval(interval);
   }, [isPlaying, nextSlide]);
 
@@ -77,11 +77,9 @@ export default function FounderActionSlider() {
     touchStartX.current = null;
   };
 
-  const current = ACTION_SLIDES[currentIndex];
-
   return (
     <div
-      className="relative rounded-2xl overflow-hidden border border-[#b6960b]/30 shadow-md bg-[#061c11] group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#036c3e]"
+      className="relative rounded-2xl overflow-hidden border border-[#b6960b]/50 shadow-md bg-[#041f12] group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#036c3e]"
       aria-roledescription="carousel"
       aria-label="Executive leadership action gallery"
       tabIndex={0}
@@ -89,50 +87,93 @@ export default function FounderActionSlider() {
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-      <div className="relative aspect-[16/10] w-full overflow-hidden">
-        {ACTION_SLIDES.map((slide, idx) => (
-          <div
-            key={slide.url}
-            className={`absolute inset-0 transition-opacity duration-1000 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-              idx === currentIndex ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
-            }`}
-          >
-            <Image
-              src={slide.url}
-              alt={slide.alt}
-              fill
-              sizes="(max-width: 768px) 100vw, 50vw"
-              priority={idx === 0}
-              loading="eager"
-              className={`object-cover object-top sm:object-center transition-transform duration-[4500ms] ease-out group-hover:scale-105 ${
-                idx === currentIndex ? 'scale-103' : 'scale-100'
+      <div className="relative aspect-[3/2] w-full overflow-hidden bg-[#041f12]">
+        {ACTION_SLIDES.map((slide, idx) => {
+          const isActive = idx === currentIndex;
+          return (
+            <div
+              key={slide.url}
+              aria-hidden={!isActive}
+              className={`absolute inset-0 transition-all duration-900 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+                isActive
+                  ? 'opacity-100 translate-x-0 z-10'
+                  : 'opacity-0 translate-x-5 z-0 pointer-events-none'
               }`}
-            />
-            {/* Subtle Gradient for Readability */}
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
-          </div>
-        ))}
+            >
+              <Image
+                src={slide.url}
+                alt={slide.alt}
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority={idx === 0}
+                loading="eager"
+                style={{ objectFit: 'contain' }}
+                className="object-contain object-center"
+              />
+              {/* Subtle Bottom Gradient for Caption Readability */}
+              <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-slate-950/85 via-slate-950/35 to-transparent pointer-events-none" />
+            </div>
+          );
+        })}
 
-        {/* Caption & Accessible Controls Overlay */}
+        {/* Smooth Animated Caption & Slide Indicators Overlay */}
         <div className="absolute bottom-0 inset-x-0 p-4 sm:p-5 z-20 flex items-end justify-between gap-4 text-white">
-          <div className="space-y-1 max-w-[80%]">
-            <span className="text-[10px] font-mono uppercase tracking-widest text-[#d4b429] font-bold">
-              Leadership in Action
-            </span>
-            <p className="text-xs sm:text-sm font-semibold text-white/95 line-clamp-1 drop-shadow-xs">
-              {current.caption}
-            </p>
+          <div className="grid grid-cols-1 grid-rows-1 max-w-[72%]">
+            {ACTION_SLIDES.map((slide, idx) => {
+              const isActive = idx === currentIndex;
+              return (
+                <div
+                  key={slide.url}
+                  aria-hidden={!isActive}
+                  className={`col-start-1 row-start-1 space-y-1 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+                    isActive
+                      ? 'opacity-100 translate-y-0'
+                      : 'opacity-0 translate-y-2 pointer-events-none'
+                  }`}
+                >
+                  <span className="text-[10px] font-mono uppercase tracking-widest text-[#d4b429] font-bold block">
+                    Leadership in Action
+                  </span>
+                  <p className="text-xs sm:text-sm font-semibold text-white/95 line-clamp-1 drop-shadow-xs">
+                    {slide.caption}
+                  </p>
+                </div>
+              );
+            })}
           </div>
 
-          {/* Accessible Pause/Resume Control on Focus/Hover */}
-          <button
-            type="button"
-            onClick={() => setIsPlaying(!isPlaying)}
-            className="p-1.5 rounded-full bg-[#061c11]/85 text-slate-300 hover:text-[#d4b429] hover:bg-[#061c11] focus:text-[#d4b429] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#b6960b] backdrop-blur-md border border-[#b6960b]/30 transition-all opacity-0 focus:opacity-100 group-focus-within:opacity-100 hover:opacity-100"
-            aria-label={isPlaying ? 'Pause slideshow' : 'Resume slideshow'}
-          >
-            {isPlaying ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5" />}
-          </button>
+          {/* Slide Dots & Pause/Play Control */}
+          <div className="flex items-center gap-2.5">
+            <div className="flex items-center gap-1.5" role="tablist" aria-label="Gallery slide selector">
+              {ACTION_SLIDES.map((slide, idx) => {
+                const isActive = idx === currentIndex;
+                return (
+                  <button
+                    key={slide.url}
+                    type="button"
+                    role="tab"
+                    aria-selected={isActive}
+                    aria-label={`Show image ${idx + 1}: ${slide.caption}`}
+                    onClick={() => setCurrentIndex(idx)}
+                    className={`h-1.5 rounded-full transition-all duration-500 cursor-pointer ${
+                      isActive
+                        ? 'w-6 bg-gradient-to-r from-[#e5c846] to-[#b6960b]'
+                        : 'w-1.5 bg-white/40 hover:bg-white/70'
+                    }`}
+                  />
+                );
+              })}
+            </div>
+
+            <button
+              type="button"
+              onClick={() => setIsPlaying(!isPlaying)}
+              className="p-1.5 rounded-full bg-[#061c11]/85 text-slate-300 hover:text-[#d4b429] hover:bg-[#061c11] focus:text-[#d4b429] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#b6960b] backdrop-blur-md border border-[#b6960b]/40 transition-all cursor-pointer"
+              aria-label={isPlaying ? 'Pause slideshow' : 'Resume slideshow'}
+            >
+              {isPlaying ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5" />}
+            </button>
+          </div>
         </div>
       </div>
     </div>

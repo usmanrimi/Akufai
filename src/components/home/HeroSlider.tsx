@@ -77,7 +77,7 @@ export default function HeroSlider({ slides }: HeroSliderProps) {
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-      {/* 1. Professional Institutional Background Image */}
+      {/* Professional Institutional Background Image with Subtle Dark-Green Overlay (No Logo Watermark on Home Hero) */}
       <div className="absolute inset-0 pointer-events-none select-none z-0" aria-hidden="true">
         <Image
           src="/images/hero_bg_institutional.jpg"
@@ -85,25 +85,10 @@ export default function HeroSlider({ slides }: HeroSliderProps) {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center opacity-30 scale-105 transition-transform duration-1000"
+          className="object-cover object-center opacity-30"
         />
-        {/* Subtle Dark-Green Institutional Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#042f1b]/94 via-[#061c11]/88 to-[#036c3e]/82" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#042f1b]/90 via-transparent to-[#042f1b]/55" />
-      </div>
-
-      {/* 2. Large, Subtle Transparent Existing Logo Icon Watermark */}
-      <div
-        className="absolute -left-16 sm:left-6 lg:left-[34%] top-1/2 -translate-y-1/2 w-[340px] h-[285px] sm:w-[480px] sm:h-[400px] lg:w-[580px] lg:h-[485px] opacity-[0.075] pointer-events-none select-none z-0"
-        aria-hidden="true"
-      >
-        <Image
-          src="/images/logo-icon-watermark.png"
-          alt=""
-          fill
-          sizes="580px"
-          className="object-contain"
-        />
       </div>
 
       {/* Subtle Ambient Golden Glow Aura */}
@@ -206,17 +191,19 @@ export default function HeroSlider({ slides }: HeroSliderProps) {
             </div>
           </div>
 
-          {/* Right Column: Hero Photograph with Preloaded Crossfade & Gentle Zoom */}
+          {/* Right Column: Hero Photograph — Complete Uncropped Display (object-contain) with Smooth Slide/Fade */}
           <div className="lg:col-span-6 relative">
-            <div className="relative aspect-[4/3] sm:aspect-[16/11] rounded-2xl overflow-hidden border-2 border-[#d4b429] ring-4 ring-[#b6960b]/25 shadow-[0_24px_60px_-12px_rgba(0,0,0,0.55)] bg-[#061c11] transition-shadow duration-500 hover:shadow-[0_28px_68px_-10px_rgba(182,150,11,0.45)] group/frame">
+            <div className="relative aspect-[4/3] sm:aspect-[16/11] rounded-2xl overflow-hidden border-2 border-[#d4b429] ring-4 ring-[#b6960b]/25 shadow-[0_24px_60px_-12px_rgba(0,0,0,0.55)] bg-[#041f12] transition-shadow duration-500 hover:shadow-[0_28px_68px_-10px_rgba(182,150,11,0.45)]">
               {slides.map((slide, idx) => {
                 const isActive = idx === currentIndex;
                 return (
                   <div
                     key={slide.id}
                     aria-hidden={!isActive}
-                    className={`absolute inset-0 transition-opacity duration-1000 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-                      isActive ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
+                    className={`absolute inset-0 transition-all duration-900 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+                      isActive
+                        ? 'opacity-100 translate-x-0 z-10'
+                        : 'opacity-0 translate-x-4 z-0 pointer-events-none'
                     }`}
                   >
                     <Image
@@ -226,11 +213,9 @@ export default function HeroSlider({ slides }: HeroSliderProps) {
                       priority={idx === 0}
                       loading="eager"
                       sizes="(max-width: 1024px) 100vw, 50vw"
-                      className={`object-cover object-center transition-transform duration-[5500ms] ease-out group-hover/frame:scale-108 ${
-                        isActive ? 'scale-105' : 'scale-100'
-                      }`}
+                      style={{ objectFit: 'contain' }}
+                      className="object-contain object-center"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-tr from-[#042f1b]/30 via-transparent to-transparent pointer-events-none" />
                   </div>
                 );
               })}
