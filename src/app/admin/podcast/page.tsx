@@ -207,15 +207,58 @@ export default function AdminPodcastPage() {
                 </div>
               </div>
 
-              <div className="space-y-1">
-                <label className="text-xs font-bold uppercase text-slate-600">Audio Stream URL (MP3 / CDN)</label>
-                <input
-                  type="text"
-                  value={editingEpisode.audioUrl || ''}
-                  onChange={(e) => setEditingEpisode({ ...editingEpisode, audioUrl: e.target.value })}
-                  placeholder="https://.../episode.mp3"
-                  className="w-full px-3 py-2 text-xs font-mono border border-slate-200 rounded-lg text-slate-900"
-                />
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="space-y-1">
+                  <label className="text-xs font-bold uppercase text-slate-600">Media Format</label>
+                  <select
+                    value={editingEpisode.mediaType || (editingEpisode.videoUrl ? 'video' : 'audio')}
+                    onChange={(e) =>
+                      setEditingEpisode({
+                        ...editingEpisode,
+                        mediaType: e.target.value as 'audio' | 'video',
+                      })
+                    }
+                    className="w-full px-3 py-2 text-xs border border-slate-200 rounded-lg text-slate-900"
+                  >
+                    <option value="audio">Audio Episode</option>
+                    <option value="video">Video Episode</option>
+                  </select>
+                </div>
+
+                <div className="space-y-1">
+                  <label className="text-xs font-bold uppercase text-slate-600">Thumbnail / Cover Image URL</label>
+                  <input
+                    type="text"
+                    value={editingEpisode.coverImageUrl || ''}
+                    onChange={(e) => setEditingEpisode({ ...editingEpisode, coverImageUrl: e.target.value })}
+                    placeholder="/images/podcast_cover_art.jpg"
+                    className="w-full px-3 py-2 text-xs font-mono border border-slate-200 rounded-lg text-slate-900"
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="space-y-1">
+                  <label className="text-xs font-bold uppercase text-slate-600">Audio Stream URL (MP3 / WAV)</label>
+                  <input
+                    type="text"
+                    value={editingEpisode.audioUrl || ''}
+                    onChange={(e) => setEditingEpisode({ ...editingEpisode, audioUrl: e.target.value })}
+                    placeholder="/media/akufai-audio-episode.wav"
+                    className="w-full px-3 py-2 text-xs font-mono border border-slate-200 rounded-lg text-slate-900"
+                  />
+                </div>
+
+                <div className="space-y-1">
+                  <label className="text-xs font-bold uppercase text-slate-600">Video Stream / Embed URL (MP4 / YouTube / Vimeo)</label>
+                  <input
+                    type="text"
+                    value={editingEpisode.videoUrl || ''}
+                    onChange={(e) => setEditingEpisode({ ...editingEpisode, videoUrl: e.target.value })}
+                    placeholder="/media/akufai-studio-broadcast.mp4 or YouTube URL"
+                    className="w-full px-3 py-2 text-xs font-mono border border-slate-200 rounded-lg text-slate-900"
+                  />
+                </div>
               </div>
 
               <div className="space-y-1">

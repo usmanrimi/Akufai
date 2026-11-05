@@ -88,7 +88,9 @@ export interface PodcastEpisode {
   status: 'published' | 'draft' | 'scheduled';
   duration: string;
   description: string;
+  mediaType?: 'audio' | 'video';
   audioUrl?: string;
+  videoUrl?: string;
   coverImageUrl: string;
   hostName: string;
   guestName?: string;

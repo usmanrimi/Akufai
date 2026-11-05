@@ -93,7 +93,7 @@ export default function FounderActionSlider() {
         {ACTION_SLIDES.map((slide, idx) => (
           <div
             key={slide.url}
-            className={`absolute inset-0 transition-opacity duration-500 ease-in-out ${
+            className={`absolute inset-0 transition-opacity duration-1000 ease-[cubic-bezier(0.22,1,0.36,1)] ${
               idx === currentIndex ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
             }`}
           >
@@ -103,7 +103,10 @@ export default function FounderActionSlider() {
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
               priority={idx === 0}
-              className="object-cover object-top sm:object-center"
+              loading="eager"
+              className={`object-cover object-top sm:object-center transition-transform duration-[4500ms] ease-out group-hover:scale-105 ${
+                idx === currentIndex ? 'scale-103' : 'scale-100'
+              }`}
             />
             {/* Subtle Gradient for Readability */}
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />

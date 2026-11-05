@@ -17,11 +17,11 @@ export default function FounderSection({ about }: FounderSectionProps) {
           <div className="lg:col-span-6 order-2 lg:order-1">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border-2 border-[#b6960b] ring-4 ring-[#b6960b]/15 shadow-[0_18px_42px_-10px_rgba(182,150,11,0.3)] bg-slate-50 group transition-shadow duration-500 hover:shadow-[0_22px_50px_-8px_rgba(182,150,11,0.45)]">
               <Image
-                src="/images/founder_business_meeting.jpg"
+                src="/images/founder_dr_ali_garba.jpg"
                 alt="Dr. Ali Garba leading strategic investment engagement"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover object-top sm:object-center transition-transform duration-700 group-hover:scale-105"
+                className="object-cover object-[center_26%] transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none" />
               <div className="absolute bottom-5 left-5 right-5 text-white">

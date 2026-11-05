@@ -1,8 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
-import { Headphones, Radio, Calendar, ArrowRight, Play } from 'lucide-react';
+import { Headphones, ArrowRight } from 'lucide-react';
 import { PodcastEpisode } from '@/types';
+import VideoPlayer from '@/components/podcast/VideoPlayer';
+import AudioPlayer from '@/components/podcast/AudioPlayer';
 
 interface PodcastFeatureProps {
   episodes: PodcastEpisode[];
@@ -10,6 +11,7 @@ interface PodcastFeatureProps {
 
 export default function PodcastFeature({ episodes }: PodcastFeatureProps) {
   const featured = episodes[0];
+  const isVideo = featured?.mediaType === 'video' || Boolean(featured?.videoUrl);
 
   return (
     <section className="py-16 lg:py-24 gold-surface-wash border-b border-[#dec668]/60">
@@ -21,7 +23,6 @@ export default function PodcastFeature({ episodes }: PodcastFeatureProps) {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 p-8 sm:p-12 items-center">
             {/* Left Content */}
             <div className="lg:col-span-7 space-y-6">
-
               <div className="space-y-3">
                 <h2 className="text-3xl sm:text-4xl font-extrabold text-[#042f1b] tracking-tight">
                   Akufai Conversations
@@ -72,7 +73,7 @@ export default function PodcastFeature({ episodes }: PodcastFeatureProps) {
               </div>
             </div>
 
-            {/* Right Card / Player Preview */}
+            {/* Right Card / Interactive Player Preview */}
             <div className="lg:col-span-5">
               <div className="bg-[#061c11] text-white rounded-xl p-6 shadow-[0_18px_40px_-10px_rgba(182,150,11,0.35)] border border-[#b6960b]/70 space-y-5 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-36 h-36 bg-[#b6960b]/25 rounded-full blur-2xl pointer-events-none gold-ambient-glow" />
@@ -80,38 +81,47 @@ export default function PodcastFeature({ episodes }: PodcastFeatureProps) {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2 text-xs font-mono text-[#d4b429]">
                     <span className="w-2 h-2 rounded-full bg-[#d4b429] animate-ping" />
-                    PREVIEW STREAM
+                    <span>{isVideo ? 'VIDEO EPISODE' : 'AUDIO EPISODE'}</span>
                   </div>
-                  <span className="text-xs text-[#d4b429]/80 font-mono">Episode 01</span>
+                  <span className="text-xs text-[#d4b429]/80 font-mono">
+                    Episode 0{featured?.episodeNumber || 1}
+                  </span>
                 </div>
 
-                <div className="relative aspect-video rounded-lg overflow-hidden bg-slate-800 border border-[#b6960b]/60">
-                  <Image
-                    src={featured?.coverImageUrl || '/images/blog_fintech_wave.jpg'}
-                    alt="Podcast preview"
-                    fill
-                    className="object-cover opacity-80"
+                {isVideo ? (
+                  <VideoPlayer
+                    videoUrl={featured?.videoUrl}
+                    audioUrl={featured?.audioUrl}
+                    coverImageUrl={featured?.coverImageUrl || '/images/podcast_video_episode.jpg'}
+                    title={featured?.title || 'Inside the Next Fintech Infrastructure Wave'}
+                    episodeNumber={featured?.episodeNumber || 1}
+                    hostName={featured?.hostName}
+                    guestName={featured?.guestName}
+                    compact
                   />
-                  <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                    <Link
-                      href={`/podcast/${featured?.slug || 'inside-next-fintech-infrastructure-wave'}`}
-                      className="w-14 h-14 rounded-full bg-gradient-to-br from-[#d4b429] to-[#b6960b] text-[#042f1b] ring-4 ring-[#d4b429]/35 flex items-center justify-center shadow-[0_0_25px_rgba(212,180,41,0.55)] hover:scale-110 transition-transform focus:outline-none"
-                      aria-label="Play preview audio"
-                    >
-                      <Play className="w-6 h-6 fill-[#042f1b] translate-x-0.5" />
-                    </Link>
-                  </div>
-                </div>
+                ) : (
+                  <AudioPlayer
+                    audioUrl={featured?.audioUrl}
+                    title={featured?.title || 'Inside the Next Fintech Infrastructure Wave'}
+                    episodeNumber={featured?.episodeNumber || 1}
+                  />
+                )}
 
                 <div className="space-y-1">
                   <p className="text-xs font-semibold text-[#d4b429] uppercase tracking-wider">
                     {featured?.category || 'Fintech Infrastructure'}
                   </p>
                   <h4 className="text-base font-bold text-white leading-snug">
-                    {featured?.title || 'Inside the Next Fintech Infrastructure Wave'}
+                    <Link
+                      href={`/podcast/${featured?.slug || 'inside-next-fintech-infrastructure-wave'}`}
+                      className="hover:text-[#d4b429] transition-colors"
+                    >
+                      {featured?.title || 'Inside the Next Fintech Infrastructure Wave'}
+                    </Link>
                   </h4>
                   <p className="text-xs text-slate-300">
-                    Host: Dr. Ali Garba • Guest: Faisal Umar
+                    Host: {featured?.hostName || 'Dr. Ali Garba'}
+                    {featured?.guestName ? ` • Guest: ${featured.guestName}` : ''}
                   </p>
                 </div>
               </div>

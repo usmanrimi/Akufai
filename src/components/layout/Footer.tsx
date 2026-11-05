@@ -48,6 +48,20 @@ export default function Footer() {
       {/* Subtle Ambient Golden Glow at Top of Footer */}
       <div className="absolute top-0 inset-x-0 h-48 bg-radial from-[#b6960b]/20 via-transparent to-transparent pointer-events-none gold-ambient-glow" />
 
+      {/* Enlarged, Low-Opacity Existing Logo Icon Background Watermark */}
+      <div
+        className="absolute -right-12 -bottom-10 sm:right-8 sm:-bottom-12 lg:right-16 lg:top-1/2 lg:-translate-y-1/2 w-[300px] h-[250px] sm:w-[420px] sm:h-[350px] lg:w-[500px] lg:h-[420px] opacity-[0.06] pointer-events-none select-none z-0"
+        aria-hidden="true"
+      >
+        <Image
+          src="/images/logo-icon-watermark.png"
+          alt=""
+          fill
+          sizes="500px"
+          className="object-contain"
+        />
+      </div>
+
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-18">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-14 items-start">
           {/* Column 1: Brand & Larger Logo */}

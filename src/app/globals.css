@@ -170,6 +170,51 @@ html {
   animation: goldPulseGlow 6s ease-in-out infinite;
 }
 
+/* Subtle Page & Scroll Fade-In / Slide-Up Animations */
+@keyframes subtleFadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 16px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.page-fade-enter > div > section:first-child > div {
+  animation: subtleFadeSlideUp 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+[data-scroll-reveal="pending"] {
+  opacity: 0;
+  transform: translate3d(0, 22px, 0);
+  transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+[data-scroll-reveal="visible"] {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Consistent Smooth Image Hover Zoom Across Cards & Frames */
+main .gold-card-surface img,
+main .gold-glow-card img,
+main article img {
+  transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+              opacity 0.5s ease;
+}
+
+main .gold-card-surface:hover img,
+main .gold-glow-card:hover img,
+main article:hover img {
+  transform: scale(1.05);
+}
+
 /* Animations respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *, ::before, ::after {
@@ -178,9 +223,16 @@ html {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+  [data-scroll-reveal="pending"] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
   .gold-glow-card:hover,
   .gold-btn-luxury:hover,
-  .green-gold-btn:hover {
+  .green-gold-btn:hover,
+  main .gold-card-surface:hover img,
+  main .gold-glow-card:hover img,
+  main article:hover img {
     transform: none !important;
   }
 }

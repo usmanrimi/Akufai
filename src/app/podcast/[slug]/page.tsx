@@ -1,11 +1,11 @@
 import React from 'react';
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { getPodcastEpisodeBySlug, getPodcastEpisodes } from '@/lib/db';
-import { Calendar, Clock, ArrowLeft, Check, Radio, Headphones } from 'lucide-react';
+import { getPodcastEpisodeBySlug } from '@/lib/db';
+import { Calendar, Clock, ArrowLeft, Check, Headphones, Video } from 'lucide-react';
 import AudioPlayer from '@/components/podcast/AudioPlayer';
+import VideoPlayer from '@/components/podcast/VideoPlayer';
 
 interface EpisodePageProps {
   params: Promise<{ slug: string }>;
@@ -31,7 +31,7 @@ export default async function PodcastEpisodeDetailPage({ params }: EpisodePagePr
     notFound();
   }
 
-  const allEpisodes = getPodcastEpisodes(false).filter((e) => e.id !== episode.id);
+  const isVideo = episode.mediaType === 'video' || Boolean(episode.videoUrl);
 
   return (
     <div className="bg-white py-12 lg:py-16">
@@ -50,8 +50,15 @@ export default async function PodcastEpisodeDetailPage({ params }: EpisodePagePr
         {/* Episode Header */}
         <div className="space-y-4 border-b border-[#dec668]/60 pb-8">
           <div className="flex flex-wrap items-center gap-3">
-            <span className="px-3 py-1 rounded-md bg-gradient-to-r from-[#fcf6df] to-[#f7ebc1] text-[#042f1b] text-xs font-bold uppercase tracking-wider border border-[#b6960b]/60">
-              Episode {episode.episodeNumber} • {episode.category}
+            <span className="px-3 py-1 rounded-md bg-gradient-to-r from-[#fcf6df] to-[#f7ebc1] text-[#042f1b] text-xs font-bold uppercase tracking-wider border border-[#b6960b]/60 inline-flex items-center gap-1.5">
+              {isVideo ? (
+                <Video className="w-3.5 h-3.5 text-[#036c3e]" />
+              ) : (
+                <Headphones className="w-3.5 h-3.5 text-[#036c3e]" />
+              )}
+              <span>
+                Episode {episode.episodeNumber} • {episode.category} • {isVideo ? 'Video' : 'Audio'}
+              </span>
             </span>
             <div className="flex items-center gap-2 text-xs text-slate-500">
               <span className="flex items-center gap-1">
@@ -75,21 +82,35 @@ export default async function PodcastEpisodeDetailPage({ params }: EpisodePagePr
           </p>
         </div>
 
-        {/* Interactive Playable Audio Player */}
-        <div className="bg-[#061c11] text-white rounded-2xl p-6 sm:p-8 border-2 border-[#b6960b]/70 shadow-[0_18px_40px_-10px_rgba(182,150,11,0.3)]">
-          <AudioPlayer
-            audioUrl={episode.audioUrl || ''}
-            title={episode.title}
-            episodeNumber={episode.episodeNumber}
-          />
-        </div>
+        {/* Interactive Video Player or Audio Player */}
+        {isVideo ? (
+          <div className="space-y-6">
+            <VideoPlayer
+              videoUrl={episode.videoUrl}
+              audioUrl={episode.audioUrl}
+              coverImageUrl={episode.coverImageUrl || '/images/podcast_video_episode.jpg'}
+              title={episode.title}
+              episodeNumber={episode.episodeNumber}
+              hostName={episode.hostName}
+              guestName={episode.guestName}
+            />
+          </div>
+        ) : (
+          <div className="bg-[#061c11] text-white rounded-2xl p-6 sm:p-8 border-2 border-[#b6960b]/70 shadow-[0_18px_40px_-10px_rgba(182,150,11,0.3)]">
+            <AudioPlayer
+              audioUrl={episode.audioUrl}
+              title={episode.title}
+              episodeNumber={episode.episodeNumber}
+            />
+          </div>
+        )}
 
         {/* Host & Guest Information */}
         <div className="gold-card-surface grid grid-cols-1 sm:grid-cols-2 gap-6 p-6 rounded-xl border border-[#dec668]">
           <div className="space-y-1">
             <span className="text-xs font-bold uppercase tracking-wider text-[#8f7506]">Host</span>
             <p className="text-base font-bold text-[#042f1b]">{episode.hostName}</p>
-            <p className="text-xs text-slate-600">Founder & CEO, Akufai Capital & Equities</p>
+            <p className="text-xs text-slate-600">Founder &amp; CEO, Akufai Capital &amp; Equities</p>
           </div>
           {episode.guestName && (
             <div className="space-y-1">

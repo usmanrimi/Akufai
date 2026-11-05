@@ -105,16 +105,16 @@ export default async function AboutPage() {
             <div className="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-14 items-center">
               {/* Prominent Rectangular Founder Portrait */}
               <div className="md:col-span-5 flex flex-col items-center sm:items-start text-center sm:text-left space-y-4">
-                <div className="relative w-64 h-80 sm:w-72 sm:h-92 rounded-2xl overflow-hidden border-2 border-[#b6960b] ring-4 ring-[#b6960b]/15 shadow-[0_14px_34px_-8px_rgba(182,150,11,0.3)] bg-slate-100">
+                <div className="relative w-64 h-80 sm:w-72 sm:h-92 rounded-2xl overflow-hidden border-2 border-[#b6960b] ring-4 ring-[#b6960b]/15 shadow-[0_14px_34px_-8px_rgba(182,150,11,0.3)] bg-slate-100 group/portrait">
                   <Image
                     src="/images/dr_ali_garba_portrait.png"
                     alt={about.founder.name}
                     fill
                     sizes="(max-width: 768px) 256px, 320px"
                     priority
-                    className="object-cover object-top"
+                    className="object-cover object-top transition-transform duration-700 ease-out group-hover/portrait:scale-105"
                   />
-                  <div className="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-2xl" />
+                  <div className="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-2xl pointer-events-none" />
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-[#042f1b]">{about.founder.name}</h3>
